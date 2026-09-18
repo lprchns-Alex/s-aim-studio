@@ -77,3 +77,8 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 /* Keep the opening section rules on the same baseline. */
 @media(min-width:651px){#challenges .section-label{line-height:20px}#challenges .issue-list{padding-top:9.5px}}
 .brand{white-space:nowrap;letter-spacing:-1.8px}
+
+/* Optical alignment: brackets share the wordmark height and centerline. */
+.brand{gap:.035em;align-items:center}
+.brand-name{display:block;line-height:1}
+.brand .brand-bracket{display:block;width:.43em;height:.84em;flex:none;overflow:visible;fill:none;stroke:currentColor;stroke-width:3.6;stroke-linecap:square;stroke-linejoin:miter;transform:translateY(.025em)}
