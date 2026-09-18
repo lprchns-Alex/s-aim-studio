@@ -1,6 +1,6 @@
 # S–AIM
 
-English-first studio homepage. Static files live in `dist/`; no build step or package installation is needed. Run `python3 -m http.server 4173 --directory dist` for a local preview.
+Studio homepage in English and Russian. Static files live in `dist/`; no build step or package installation is needed. Run `python3 -m http.server 4173 --directory dist` for a local preview.
 
 ## Design and interaction
 
@@ -14,7 +14,7 @@ Phone `+7 (000) 000-00-00` and `hello@s-aim.example` are placeholders. The form 
 
 ## Languages
 
-The current page, metadata and interface are in English (`lang=en`). Russian and Turkish are planned; no inactive language links are shown. Markup, style and behaviour are separate so localized routes can reuse the visual system. Future translations must include metadata, accessibility labels and script-generated interface text.
+English is at `/` and Russian at `/ru/`. The RU / EN switch preserves the current section. Each page has localized metadata, accessibility labels, form preview text and game controls, plus canonical and hreflang links. Shared styles and behaviour support both locales. Turkish remains planned.
 
 ## Preserved version
 

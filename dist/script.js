@@ -3,6 +3,27 @@
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const root = document.documentElement;
+const ru = root.lang === 'ru';
+const ui = ru ? {
+  dark:'Включить тёмную тему', light:'Включить светлую тему', menu:'МЕНЮ', close:'ЗАКРЫТЬ', play:'ИГРАТЬ',
+  footer:'СОЗДАЁМ ВАЖНОЕ', loading:'S–AIM / ДИЗАЙН. РАЗРАБОТКА. РОСТ.',
+  launch:'Пробел или клик — запуск. ← → — движение.',
+  lives:n=>`Мячей: ${n} · ← → — движение`,
+  retry:'Ещё попытку? Кликните или нажмите пробел.', win:'Все блоки собраны! Кликните или нажмите пробел, чтобы сыграть снова.',
+  resume:'Продолжить анимацию ▶', pause:'Остановить анимацию Ⅱ',
+  inquiry:'S–AIM — ОПИСАНИЕ ПРОЕКТА', name:'Имя', email:'Почта', company:'Компания', service:'Услуга', message:'Давайте обсудим проект.'
+} : {
+  dark:'Switch to dark theme', light:'Switch to light theme', menu:'MENU', close:'CLOSE', play:'PLAY',
+  footer:'MAKE IT MATTER', loading:'S–AIM / DESIGN. BUILD. GROW.',
+  launch:'Press Space or click to launch. ← → to move.', lives:n=>`Balls ${n} · ← → to move`,
+  retry:'Nice try. Click or press Space to play again.', win:'You cleared it. Click or press Space to play again.',
+  resume:'Resume motion ▶', pause:'Pause motion Ⅱ',
+  inquiry:'S–AIM PROJECT INQUIRY', name:'Name', email:'Email', company:'Company', service:'Service', message:'Let’s discuss the project.'
+};
+// Keep the reader in the same section when switching language.
+$$('.language-switch a').forEach(link => link.addEventListener('click', () => {
+  if (location.hash) link.hash = location.hash;
+}));
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 let paused = reduced.matches;
 let theme = 'light';
@@ -11,7 +32,7 @@ function applyTheme(value) {
   theme = value === 'dark' ? 'dark' : 'light';
   root.dataset.theme = theme;
   $('.theme-toggle').setAttribute('aria-pressed', String(theme === 'dark'));
-  $('.theme-toggle').setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  $('.theme-toggle').setAttribute('aria-label', theme === 'dark' ? ui.light : ui.dark);
   document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#111110' : '#fcfcfb';
 }
 applyTheme(theme);
@@ -51,7 +72,7 @@ $$('#menu-panel nav a').forEach((el,i)=>el.style.setProperty('--index',i));
 function setMenu(open) {
   clearTimeout(closeTimer);
   menuButton.setAttribute('aria-expanded', String(open));
-  $('.menu-word').textContent = open ? 'CLOSE' : 'MENU';
+  $('.menu-word').textContent = open ? ui.close : ui.menu;
   $('#main').inert = open;
   document.body.style.overflow = open ? 'hidden' : '';
   if (open) {
@@ -110,6 +131,14 @@ const glyphs={
  U:['10001','10001','10001','10001','10001','10001','01110'], V:['10001','10001','10001','10001','10001','01010','00100'], W:['10001','10001','10001','10101','10101','11011','10001'],
  X:['10001','10001','01010','00100','01010','10001','10001'], Y:['10001','10001','01010','00100','00100','00100','00100'], '-':['00000','00000','00000','11111','00000','00000','00000'],
  ' ':['000','000','000','000','000','000','000'], '+':['00000','00100','00100','11111','00100','00100','00000']};
+// Cyrillic letterforms for the translated pixel heading and playable blocks.
+Object.assign(glyphs, {
+ 'А':glyphs.A, 'В':glyphs.B, 'Е':glyphs.E, 'М':glyphs.M, 'Н':glyphs.H, 'О':glyphs.O, 'С':glyphs.C,
+ 'Ё':['01010','00000','11111','10000','11110','10000','11111'],
+ 'З':['11110','00001','00001','01110','00001','00001','11110'],
+ 'Д':['00110','01010','01010','01010','01010','11111','10001'],
+ 'Ж':['10101','10101','01110','00100','01110','10101','10101']
+});
 function pixelPoints(text){let x=0;const points=[];[...text].forEach(ch=>{const grid=glyphs[ch]||glyphs[' '];grid.forEach((row,y)=>[...row].forEach((v,i)=>{if(v==='1')points.push([x+i,y]);}));x+=grid[0].length+1;});return{points,width:x-1};}
 function fitCanvas(canvas,w,h){const dpr=Math.min(devicePixelRatio||1,2);const width=Math.round(w*dpr),height=Math.round(h*dpr);if(canvas.width!==width||canvas.height!==height){canvas.width=width;canvas.height=height;}const ctx=canvas.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.imageSmoothingEnabled=false;return ctx;}
 function pixelText(ctx,text,x,y,size,gap=.3){const {points}=pixelPoints(text);points.forEach(([px,py])=>ctx.fillRect(Math.round(x+px*size),Math.round(y+py*size),Math.max(1,size-gap),Math.max(1,size-gap)));}
@@ -121,7 +150,7 @@ if (!paused && !location.hash) {
   document.body.classList.add('booting');
   const loader=document.createElement('div');loader.className='loader';loader.setAttribute('aria-hidden','true');
   const canvas=document.createElement('canvas');loader.append(canvas);
-  const cap=document.createElement('span');cap.className='loader-caption';cap.textContent='S–AIM / DESIGN. BUILD. GROW.';loader.append(cap);document.body.append(loader);
+  const cap=document.createElement('span');cap.className='loader-caption';cap.textContent=ui.loading;loader.append(cap);document.body.append(loader);
   const start=performance.now(),data=pixelPoints('S-AIM');
   const safe=setTimeout(()=>{loader.remove();completeIntro();},2600);
   const intro=time=>{
@@ -157,22 +186,22 @@ function drawHero(t){
  ['UI','AI'].forEach((word,i)=>{const x=w*(.78+i*.065),size=scale*.7,box=12*size;const jump=paused?0:Math.max(0,Math.sin(t*.0017+i*1.8))*8;ctx.lineWidth=scale*.65;ctx.strokeRect(Math.round(x),baseline-box-jump,box,box);pixelText(ctx,word,x+size,baseline-box+size*2.5-jump,size,0);});
  const fly=(t%22000)/22000;if(fly>.72){const x=(fly-.72)/.28*(w+120)-60;drawSprite(ctx,['000011110000','001111111100','111111111111','001111111100','000100001000'],x,10+Math.sin(fly*25)*9,3);}
 }
-function drawFooter(){const c=$('#footer-pixels'),w=c.clientWidth,h=c.clientHeight;if(!w)return;const ctx=fitCanvas(c,w,h),text='MAKE IT MATTER',data=pixelPoints(text),u=Math.min(w/data.width,22);ctx.clearRect(0,0,w,h);ctx.fillStyle='#f0f0ec';pixelText(ctx,text,(w-data.width*u)/2,(h-7*u)/2,u,.8);}
+function drawFooter(){const c=$('#footer-pixels'),w=c.clientWidth,h=c.clientHeight;if(!w)return;const ctx=fitCanvas(c,w,h),text=ui.footer,data=pixelPoints(text),u=Math.min(w/data.width,22);ctx.clearRect(0,0,w,h);ctx.fillStyle='#f0f0ec';pixelText(ctx,text,(w-data.width*u)/2,(h-7*u)/2,u,.8);}
 function drawTeam(){ $$('[data-glyph]').forEach(c=>{const w=c.clientWidth,h=c.clientHeight;if(!w)return;const ctx=fitCanvas(c,w,h);ctx.clearRect(0,0,w,h);ctx.fillStyle=ink();const kind=c.dataset.glyph;const u=Math.floor(Math.min(w/17,h/14));if(kind==='design'){const x=(w-u*9)/2,y=(h-u*9)/2;for(let row=0;row<9;row++)for(let col=0;col<9;col++)if(row===0||row===8||col===0||col===8||row===4||col===4)ctx.fillRect(x+col*u,y+row*u,u-.5,u-.5);}if(kind==='code'){pixelText(ctx,'UI',(w-11*u)/2,(h-7*u)/2,u,.5);}if(kind==='growth'){const x=(w-u*10)/2,y=(h+u*8)/2;for(let col=0;col<10;col++)for(let row=0;row<=col*.8;row++)ctx.fillRect(x+col*u,y-row*u,u-.6,u-.6);}});}
 
 // A small, self-contained pixel breakout interaction, inspired by the reference footer.
 const gameCanvas=$('#breakout'),gamePanel=$('#game-panel'),play=$('#play-button'),wordPanel=$('.pixel-word');
 let gameOpen=false,game=null,keys=new Set();
-function newGame(){const data=pixelPoints('MAKE IT MATTER');const size=Math.min(13,900/data.width),left=(1000-data.width*size)/2;game={bricks:data.points.map(([x,y])=>({x:left+x*size,y:25+y*size,w:size-1,h:size-1,alive:true})),x:500,y:330,vx:165,vy:-225,paddle:500,launched:false,lives:3,score:0,ended:false};updateGameStatus();drawGame();}
-function updateGameStatus(text){$('#game-status').textContent=text||(game.launched?`Balls ${game.lives} · ← → to move`:'Press Space or click to launch. ← → to move.');$('#game-score').textContent=`${game.score} / ${game.bricks.length}`;}
+function newGame(){const data=pixelPoints(ui.footer);const size=Math.min(13,900/data.width),left=(1000-data.width*size)/2;game={bricks:data.points.map(([x,y])=>({x:left+x*size,y:25+y*size,w:size-1,h:size-1,alive:true})),x:500,y:330,vx:165,vy:-225,paddle:500,launched:false,lives:3,score:0,ended:false};updateGameStatus();drawGame();}
+function updateGameStatus(text){$('#game-status').textContent=text||(game.launched?ui.lives(game.lives):ui.launch);$('#game-score').textContent=`${game.score} / ${game.bricks.length}`;}
 function launch(){if(!gameOpen)return;if(paused)setMotion(false);if(game.ended)newGame();game.launched=true;updateGameStatus();}
-play.addEventListener('click',()=>{gameOpen=!gameOpen;gamePanel.hidden=!gameOpen;wordPanel.classList.toggle('is-hidden',gameOpen);play.setAttribute('aria-expanded',String(gameOpen));play.innerHTML=gameOpen?'× CLOSE':'<span aria-hidden="true">▶</span> PLAY';keys.clear();if(gameOpen){newGame();gameCanvas.focus({preventScroll:true});}else{game=null;drawFooter();}});
+play.addEventListener('click',()=>{gameOpen=!gameOpen;gamePanel.hidden=!gameOpen;wordPanel.classList.toggle('is-hidden',gameOpen);play.setAttribute('aria-expanded',String(gameOpen));play.textContent=gameOpen?'× '+ui.close:'▶ '+ui.play;keys.clear();if(gameOpen){newGame();gameCanvas.focus({preventScroll:true});}else{game=null;drawFooter();}});
 gameCanvas.addEventListener('pointermove',event=>{if(!game)return;const r=gameCanvas.getBoundingClientRect();game.paddle=Math.max(70,Math.min(930,(event.clientX-r.left)/r.width*1000));});
 gameCanvas.addEventListener('click',launch);
 gameCanvas.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight',' '].includes(event.key)){event.preventDefault();keys.add(event.key);if(event.key===' ')launch();}});
 gameCanvas.addEventListener('keyup',event=>keys.delete(event.key));
 gameCanvas.addEventListener('blur',()=>keys.clear());
-function stepGame(dt){if(!game||game.ended)return;const g=game;if(keys.has('ArrowLeft'))g.paddle-=dt*490;if(keys.has('ArrowRight'))g.paddle+=dt*490;g.paddle=Math.max(70,Math.min(930,g.paddle));if(!g.launched){g.x=g.paddle;g.y=330;return;}g.x+=g.vx*dt;g.y+=g.vy*dt;if(g.x<6||g.x>994){g.vx*=-1;g.x=Math.max(6,Math.min(994,g.x));}if(g.y<6){g.vy=Math.abs(g.vy);g.y=6;}if(g.vy>0&&g.y>=329&&g.y<351&&Math.abs(g.x-g.paddle)<81){g.y=329;const hit=(g.x-g.paddle)/80;g.vx=hit*240;g.vy=-Math.sqrt(Math.max(16000,85000-g.vx*g.vx));}for(const b of g.bricks){if(b.alive&&g.x+5>b.x&&g.x-5<b.x+b.w&&g.y+5>b.y&&g.y-5<b.y+b.h){b.alive=false;g.score++;g.vy*=-1;updateGameStatus();break;}}if(g.y>385){g.lives--;g.launched=false;g.vx=165;g.vy=-225;if(!g.lives){g.ended=true;updateGameStatus('Nice try. Click or press Space to play again.');}else updateGameStatus();}if(g.score===g.bricks.length){g.ended=true;updateGameStatus('You cleared it. Click or press Space to play again.');}}
+function stepGame(dt){if(!game||game.ended)return;const g=game;if(keys.has('ArrowLeft'))g.paddle-=dt*490;if(keys.has('ArrowRight'))g.paddle+=dt*490;g.paddle=Math.max(70,Math.min(930,g.paddle));if(!g.launched){g.x=g.paddle;g.y=330;return;}g.x+=g.vx*dt;g.y+=g.vy*dt;if(g.x<6||g.x>994){g.vx*=-1;g.x=Math.max(6,Math.min(994,g.x));}if(g.y<6){g.vy=Math.abs(g.vy);g.y=6;}if(g.vy>0&&g.y>=329&&g.y<351&&Math.abs(g.x-g.paddle)<81){g.y=329;const hit=(g.x-g.paddle)/80;g.vx=hit*240;g.vy=-Math.sqrt(Math.max(16000,85000-g.vx*g.vx));}for(const b of g.bricks){if(b.alive&&g.x+5>b.x&&g.x-5<b.x+b.w&&g.y+5>b.y&&g.y-5<b.y+b.h){b.alive=false;g.score++;g.vy*=-1;updateGameStatus();break;}}if(g.y>385){g.lives--;g.launched=false;g.vx=165;g.vy=-225;if(!g.lives){g.ended=true;updateGameStatus(ui.retry);}else updateGameStatus();}if(g.score===g.bricks.length){g.ended=true;updateGameStatus(ui.win);}}
 function drawGame(){if(!game)return;const ctx=gameCanvas.getContext('2d');ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,1000,380);ctx.fillStyle='#f4f4f1';game.bricks.forEach(b=>{if(b.alive)ctx.fillRect(b.x,b.y,b.w,b.h);});ctx.fillRect(game.paddle-75,343,150,11);ctx.beginPath();ctx.arc(game.x,game.y,5,0,Math.PI*2);ctx.fill();}
 let previous=0;
 function frame(time){const dt=previous?Math.min((time-previous)/1000,.03):0;previous=time;if(!document.hidden&&!paused){phase+=dt*1000;if(heroVisible)drawHero(phase);if(gameOpen){stepGame(dt);drawGame();}}requestAnimationFrame(frame);}
@@ -180,12 +209,12 @@ requestAnimationFrame(frame);
 function redraw(){drawHero(phase);drawFooter();drawTeam();if(gameOpen)drawGame();}
 let resizeTimer;addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(redraw,100);});
 document.fonts.ready.then(redraw);redraw();
-function setMotion(value){paused=value;root.classList.toggle('motion-paused',value);$('#motion-toggle').setAttribute('aria-pressed',String(value));$('#motion-toggle').textContent=value?'Resume motion ▶':'Pause motion Ⅱ';if(value)redraw();}
+function setMotion(value){paused=value;root.classList.toggle('motion-paused',value);$('#motion-toggle').setAttribute('aria-pressed',String(value));$('#motion-toggle').textContent=value?ui.resume:ui.pause;if(value)redraw();}
 $('#motion-toggle').addEventListener('click',()=>setMotion(!paused));reduced.addEventListener('change',e=>setMotion(e.matches));setMotion(paused);
 
 // Demo form: compose locally, never send or claim that an enquiry was submitted.
 let brief='';
-$('#contact-form').addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);brief=`S–AIM PROJECT INQUIRY\n\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nCompany: ${data.get('company')||'—'}\nService: ${data.get('service')}\n\n${data.get('message')||'Let’s discuss the project.'}`;$('#message-content').textContent=brief;$('#form-preview').hidden=false;$('#form-preview').focus({preventScroll:true});$('#form-preview').scrollIntoView({behavior:paused?'auto':'smooth',block:'nearest'});});
+$('#contact-form').addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);brief=`${ui.inquiry}\n\n${ui.name}: ${data.get('name')}\n${ui.email}: ${data.get('email')}\n${ui.company}: ${data.get('company')||'—'}\n${ui.service}: ${data.get('service')}\n\n${data.get('message')||ui.message}`;$('#message-content').textContent=brief;$('#form-preview').hidden=false;$('#form-preview').focus({preventScroll:true});$('#form-preview').scrollIntoView({behavior:paused?'auto':'smooth',block:'nearest'});});
 $('#download-brief').addEventListener('click',()=>{if(!brief)return;const url=URL.createObjectURL(new Blob([brief],{type:'text/plain;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='s-aim-project-brief.txt';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 $('#year').textContent=new Date().getFullYear();
 })();
