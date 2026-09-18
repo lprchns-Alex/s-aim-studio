@@ -23,3 +23,9 @@ The earlier green Russian design is preserved in Git at tag `saved-green-v1`, co
 ## Services interaction
 
 The services section follows the Moremedia reference: equal vertical columns expand on hover, with readable lists and links to the contact form. Keyboard and tap controls are available; narrow screens use a vertical accordion. Selecting an offering preselects its service category in the local brief. The complete bilingual version before this change is preserved at Git tag `saved-bilingual-before-service-panels` and saved Site version 3.
+
+## Experimental testimonials
+
+A four-column editorial block is placed after the team and before FAQ in both languages. Every testimonial is explicitly marked as sample content, with placeholder author labels; no actual client feedback is claimed. Native disclosures show the full sample text. Remove the `section#reviews` element from both pages to omit this experiment.
+
+Three decorative images were created with built-in Imagegen: `dist/assets/review-mountain.png`, `dist/assets/review-birds.png`, `dist/assets/review-leaf.png`. Exact prompts are recorded in `review-image-prompts.txt`. The fourth card reuses `dist/assets/project-system.png` from the earlier design, rendered in grayscale through CSS. These images do not depict customers or delivered projects.

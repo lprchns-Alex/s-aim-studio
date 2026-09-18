@@ -1,0 +1,8 @@
+1. mountain.png
+Use case: photorealistic-natural. Asset type: decorative editorial website thumbnail. Create a portrait 2:3 fine-art black-and-white photograph of a mountain peak emerging from vast white mist. The tiny peak sits near the lower middle with much pale-gray negative space above and around it. Soft atmospheric natural light, fine photographic grain, restrained minimalist composition. No text, logos, watermarks, people or borders.
+
+2. birds.png
+Use case: photorealistic-natural. Asset type: decorative editorial website thumbnail. Create a portrait 2:3 fine-art black-and-white photograph of two small birds perched on fine horizontal wires crossing the lower half of the frame. A stormy charcoal-gray sky graduates to pale gray below. Minimalist composition, delicate silhouettes, subtle photographic grain, quiet editorial mood. No text, logos, watermarks, people or borders.
+
+3. leaf.png
+Use case: photorealistic-natural. Asset type: decorative editorial website thumbnail. Create a landscape 3:2 black-and-white close editorial photograph of one elegantly curved leaf on a thin stem, against a clean off-white background. Soft side light describes the sculptural surface of the leaf. Strong negative space, natural botanical texture, subtle fine photographic grain, refined minimalist composition. No text, logos, branding, watermarks, people or borders.
