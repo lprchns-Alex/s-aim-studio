@@ -29,3 +29,7 @@ The services section follows the Moremedia reference: equal vertical columns exp
 A four-column editorial block is placed after the team and before FAQ in both languages. Every testimonial is explicitly marked as sample content, with placeholder author labels; no actual client feedback is claimed. Native disclosures show the full sample text. Remove the `section#reviews` element from both pages to omit this experiment.
 
 Three decorative images were created with built-in Imagegen: `dist/assets/review-mountain.png`, `dist/assets/review-birds.png`, `dist/assets/review-leaf.png`. Exact prompts are recorded in `review-image-prompts.txt`. The fourth card reuses `dist/assets/project-system.png` from the earlier design, rendered in grayscale through CSS. These images do not depict customers or delivered projects.
+
+## Review styling update
+
+The review section now reuses the team’s canvas pixel icon system, solid hairline rules, shared text links and site typography. The four visual panels retain staggered heights. The former photographic review layout is preserved at tag `saved-photo-reviews` and saved Site version 4. Its raster assets remain available but are not loaded by the current page. Both locales, themes and disclosure behaviour are supported.
