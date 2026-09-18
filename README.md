@@ -1,20 +1,21 @@
 # S–AIM
 
-Русская версия сайта студии. Статический сайт без сборки; публичные файлы находятся в dist/.
+English-first studio homepage. Static files live in `dist/`; no build step or package installation is needed. Run `python3 -m http.server 4173 --directory dist` for a local preview.
 
-## Содержание
-Услуги, опыт студии более 15 лет, собственные складские системы, компетенции команды, этапы работы и контакты. Услуги раскрываются через нативный HTML. Для мобильной навигации используется небольшой JS-файл.
+## Design and interaction
 
-Телефон +7 (000) 000-00-00 и hello@s-aim.example намеренно демонстрационные. Перед публичным запуском заменить их в блоке контактов. Заявки не собираются, форма и база данных отсутствуют. Имена сотрудников, фотографии, отзывы и количественные результаты проектов не выдумывались.
+Desktop homepage inspired by the Havu reference: monochrome typography, generous spacing, pixel artwork, letter-by-letter heading reveals, scroll transitions, moving marquees, sticky service cards, animated diagram, full-screen navigation, light/dark themes, FAQ accordion and a keyboard-playable pixel breakout footer. Original pixel assets are rendered in canvas and SVG. Reduced motion and a manual motion toggle are supported.
 
-## Следующие языки
-Сейчас доступен только русский язык: lang=ru и русские title/description. CSS, JS и изображения отделены от текста. Для английской и турецкой версий можно добавить /en/index.html и /tr/index.html, используя те же стили, скрипт и изображения; затем добавить переключатель соответствующих страниц, локализовать aria-label в скрипте и прописать hreflang. Макет адаптивный. Неопубликованные языки не показаны в интерфейсе.
+## Content
 
-## Иллюстрации
-Три оригинальные иллюстрации созданы встроенным Imagegen. Общий промпт: единая серия предметных CGI-композиций, тёмно-зелёный, лаймовый, дымчатое стекло, металлические элементы, светлый фон; без текста, логотипов и людей.
+Services, the studio’s 15+ years in business, inventory systems installed on customer servers, team disciplines, process, FAQ and contact section. No fictional clients, project results or employee identities are presented.
 
-- dist/assets/hero-focus.png: концентрические кольца и центральная лаймовая сфера — фокус на задаче бизнеса.
-- dist/assets/project-system.png: модульные стеклянные и зелёные панели — связанные цифровые решения.
-- dist/assets/project-inventory.png: система связанных кубов — складской учёт и интеграции.
+Phone `+7 (000) 000-00-00` and `hello@s-aim.example` are placeholders. The form previews a brief locally and can download it; it does not send or store submissions on a server. Connect a real inbox/form endpoint before accepting enquiries.
 
-Декоративные изображения не выдаются за реальные интерфейсы или реализованные проекты. Фото команды можно добавить позднее.
+## Languages
+
+The current page, metadata and interface are in English (`lang=en`). Russian and Turkish are planned; no inactive language links are shown. Markup, style and behaviour are separate so localized routes can reuse the visual system. Future translations must include metadata, accessibility labels and script-generated interface text.
+
+## Preserved version
+
+The earlier green Russian design is preserved in Git at tag `saved-green-v1`, commit `6e14403df2270af9ba48999d6bdcbb81b3e90c3b`. Its three generated CGI images remain in `dist/assets/` for reuse but are not loaded by this homepage.
