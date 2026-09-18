@@ -36,7 +36,7 @@ function applyTheme(value) {
   document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#111110' : '#fcfcfb';
 }
 applyTheme(theme);
-$('.theme-toggle').addEventListener('click', () => { applyTheme(theme === 'dark' ? 'light' : 'dark'); try { localStorage.setItem('saim-theme', theme); } catch {} drawTeam(); });
+$('.theme-toggle').addEventListener('click', () => { applyTheme(theme === 'dark' ? 'light' : 'dark'); try { localStorage.setItem('saim-theme', theme); } catch {} redraw(); });
 
 // Each word is a clipping mask. Individual letters enter with a small stagger.
 $$('[data-split]').forEach(el => {
@@ -208,26 +208,120 @@ if (!paused && !location.hash) {
 } else completeIntro();
 
 const heroCanvas=$('#hero-pixels');
-const botA=['00011000','00111100','01111110','01100110','11111111','10111101','00111100','00100100','01100110'];
-const runnerA=['001100','001100','011110','101101','001100','001100','010010','100001'];
-const runnerB=['001100','001100','011110','001100','101101','001100','001010','001100'];
-function drawSprite(ctx,grid,x,y,scale){grid.forEach((row,py)=>[...row].forEach((v,px)=>{if(v==='1')ctx.fillRect(Math.round(x+px*scale),Math.round(y+py*scale),scale,scale);}));}
 let heroVisible=true,footerVisible=false,phase=0;
 const sceneObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.target===heroCanvas)heroVisible=e.isIntersecting;else footerVisible=e.isIntersecting;}));
 sceneObserver.observe(heroCanvas);sceneObserver.observe($('#footer-pixels'));
 function drawHero(t){
  const w=heroCanvas.clientWidth,h=heroCanvas.clientHeight;if(!w||!h)return;
- const ctx=fitCanvas(heroCanvas,w,h);ctx.clearRect(0,0,w,h);ctx.fillStyle=ink();
- const scale=w>800?5:4,baseline=h-3;
- const runX=((t*.045)%(w+120))-60;
- drawSprite(ctx,Math.floor(t/180)%2?runnerA:runnerB,runX,baseline-8*scale,scale);
- const bob=paused?0:Math.max(0,Math.sin(t*.002))*5;
- drawSprite(ctx,botA,w*.55,baseline-9*scale-bob,scale);
- ['UI','AI'].forEach((word,i)=>{const x=w*(.78+i*.065),size=scale*.7,box=12*size;const jump=paused?0:Math.max(0,Math.sin(t*.0017+i*1.8))*8;ctx.lineWidth=scale*.65;ctx.strokeRect(Math.round(x),baseline-box-jump,box,box);pixelText(ctx,word,x+size,baseline-box+size*2.5-jump,size,0);});
- const fly=(t%22000)/22000;if(fly>.72){const x=(fly-.72)/.28*(w+120)-60;drawSprite(ctx,['000011110000','001111111100','111111111111','001111111100','000100001000'],x,10+Math.sin(fly*25)*9,3);}
+ const ctx=fitCanvas(heroCanvas,w,h);ctx.clearRect(0,0,w,h);
+ const unit=w>=1500?4:w>=600?3:2;
+ const baseline=Math.floor(h-3),color=ink(),paper=theme==='dark'?'#111110':'#fcfcfb';
+ const beat=Math.floor(t/230)%2,cycle=(t%10000)/10000;
+ // All positions sit on the same integer pixel grid as the original characters.
+ function station(center,draw){ctx.save();ctx.translate(Math.round(center-17*unit),baseline);ctx.fillStyle=color;draw();ctx.restore();}
+ function p(x,y,width=1,height=1){ctx.fillRect(Math.round(x*unit),Math.round(y*unit),Math.round(width*unit),Math.round(height*unit));}
+ function cut(x,y,width=1,height=1){ctx.fillStyle=paper;p(x,y,width,height);ctx.fillStyle=color;}
+ function outline(x,y,width,height){p(x,y,width,1);p(x,y+height-1,width,1);p(x,y,1,height);p(x+width-1,y,1,height);}
+ function check(x,y){p(x,y+1);p(x+1,y+2);p(x+2,y+1);p(x+3,y);}
+ function head(x,y){p(x+1,y,4,1);p(x,y+1,6,4);p(x+1,y+5,4,1);cut(x+4,y+2);}
+ function coder(){
+   // Seated developer, monitor, keyboard and a cup. Hands alternate on the keys.
+   p(1,-10,1,8);p(1,-3,9,1);p(2,-2,1,2);p(8,-2,1,2);
+   head(3,-20);p(4,-14,4,7);p(5,-7,7,2);p(10,-5,2,4);p(9,-1,5,1);
+   p(8,-13,2,4);p(9,-11,4,1);p(12,-12+beat,2,1);
+   p(4,-12,1,4);p(5,-9,7,1);p(11,-10-beat,2,1);
+   p(3,-8,29,1);p(14,-7,1,7);p(29,-7,1,7);p(13,-10,8,1);
+   outline(15,-24,16,12);p(22,-12,2,3);p(19,-9,8,1);
+   const lines=Math.min(4,Math.floor(cycle*6)+1);
+   for(let row=0;row<lines;row++){p(17,-21+row*2,1,1);p(19,-21+row*2,3+(row%2)*3,1);}
+   if(cycle<.73&&beat)p(26,-21+(lines-1)*2,1,1);
+   if(cycle>.75){cut(17,-22,12,8);check(21,-20);}
+   outline(33,-12,3,4);p(36,-11,1,2);
+ }
+ function designer(){
+   // A standing designer places interface blocks on a wireframe board.
+   const reach=cycle>.23&&cycle<.68;
+   head(2,-19);p(3,-13,4,7);p(3,-6,2,5);p(7,-6,2,5);p(2,-1,4,1);p(7,-1,4,1);
+   p(1,-12,2,6);p(7,-12,2,reach?2:5);p(8,-12,reach?4:2,1);if(reach)p(11,-14+beat,1,3);
+   outline(13,-24,20,17);p(14,-21,18,1);p(15,-23,1,1);p(17,-23,1,1);
+   p(17,-7,1,7);p(28,-7,1,7);p(15,-1,5,1);p(26,-1,5,1);
+   p(16,-18,13,1);outline(16,-15,5,5);
+   const progress=Math.min(1,Math.max(0,(cycle-.22)/.35));
+   const blockX=Math.round(8+progress*15),blockY=Math.round(-9-progress*6);
+   if(cycle<.85){outline(blockX,blockY,5,5);p(blockX+4,blockY+4,1,3);p(blockX+5,blockY+5);}
+   if(cycle>=.58){p(23,-9,5,1);p(16,-9,4,1);}
+   if(cycle>=.85){outline(23,-15,5,5);check(25,-19);}
+ }
+ function engineer(){
+   // Server technician adjusts a port while a deployment fills the status bar.
+   outline(20,-25,12,25);
+   for(let row=0;row<3;row++){
+     outline(22,-22+row*7,8,5);p(24,-20+row*7,3,1);
+     if((Math.floor(t/420)+row)%3!==0)p(28,-20+row*7);
+   }
+   const working=cycle<.75;
+   head(8,-20);p(9,-14,4,8);p(9,-6,2,5);p(13,-6,2,5);p(8,-1,4,1);p(13,-1,4,1);
+   p(7,-13,2,6);p(13,-13,2,working?3:6);
+   if(working){p(14,-11,5,1);p(18,-12+beat,2,1);p(17,-10,1,3);}
+   else{p(14,-17,1,5);p(15,-18,2,1);check(9,-25);}
+   // Small terminal next to the rack, with a visibly progressing build.
+   outline(0,-7,6,5);p(0,-2,7,1);p(1,-5,Math.max(1,Math.floor(cycle*4)),1);
+ }
+ const centers=w<600?[w*.22,w*.76]:[w*.18,w*.5,w*.82];
+ station(centers[0],coder);
+ if(w>=600)station(centers[1],designer);
+ station(centers[centers.length-1],engineer);
+ // Tiny packets travel between the workstations; a completed build travels onward.
+ if(w>=600){
+   ctx.fillStyle=color;
+   for(let i=0;i<centers.length-1;i++){
+     const from=centers[i]+23*unit,to=centers[i+1]-20*unit;
+     if(to<=from)continue;
+     const progress=((t+i*1800)%5200)/5200;
+     if(progress>.1&&progress<.85){
+       const x=Math.round(from+(to-from)*(progress-.1)/.75);
+       ctx.globalAlpha=.5;ctx.fillRect(x,baseline-4*unit,2*unit,unit);
+       ctx.fillRect(x-3*unit,baseline-4*unit,unit,unit);ctx.globalAlpha=1;
+     }
+   }
+ }
 }
 function drawFooter(){const c=$('#footer-pixels'),w=c.clientWidth,h=c.clientHeight;if(!w)return;const ctx=fitCanvas(c,w,h),text=ui.footer,data=pixelPoints(text),u=Math.min(w/data.width,22);ctx.clearRect(0,0,w,h);ctx.fillStyle='#f0f0ec';pixelText(ctx,text,(w-data.width*u)/2,(h-7*u)/2,u,.8);}
-function drawTeam(){ $$('[data-glyph]').forEach(c=>{const w=c.clientWidth,h=c.clientHeight;if(!w)return;const ctx=fitCanvas(c,w,h);ctx.clearRect(0,0,w,h);ctx.fillStyle=ink();const kind=c.dataset.glyph;const u=Math.floor(Math.min(w/17,h/14));if(kind==='design'){const x=(w-u*9)/2,y=(h-u*9)/2;for(let row=0;row<9;row++)for(let col=0;col<9;col++)if(row===0||row===8||col===0||col===8||row===4||col===4)ctx.fillRect(x+col*u,y+row*u,u-.5,u-.5);}if(kind==='code'){pixelText(ctx,'UI',(w-11*u)/2,(h-7*u)/2,u,.5);}if(kind==='system'){const x=(w-u*11)/2,y=(h-u*11)/2;for(let row=0;row<11;row++)for(let col=0;col<11;col++){const tile=(row<4||row>6)&&(col<4||col>6);const bridge=(row===5&&col>1&&col<9)||(col===5&&row>1&&row<9);if(tile||bridge)ctx.fillRect(x+col*u,y+row*u,u-.6,u-.6);}}if(kind==='growth'){const x=(w-u*10)/2,y=(h+u*8)/2;for(let col=0;col<10;col++)for(let row=0;row<=col*.8;row++)ctx.fillRect(x+col*u,y-row*u,u-.6,u-.6);}});}
+// Four fictional portraits, using the same monochrome tile grid as the studio art.
+function drawPortrait(ctx,w,h,variant){
+ const grid=Array.from({length:21},()=>Array(19).fill(0));
+ const tile=(x,y,width=1,height=1,value=1)=>{for(let row=y;row<y+height;row++)for(let col=x;col<x+width;col++)if(grid[row]&&col>=0&&col<19)grid[row][col]=value;};
+ tile(6,2,7);tile(4,3,11);tile(3,4,13,2);
+ tile(3,6,1,8);tile(15,6,1,8);tile(2,9,1,3);tile(16,9,1,3);
+ tile(4,14,1,2);tile(14,14,1,2);tile(5,16,1);tile(13,16,1);tile(6,17,7);
+ tile(6,9,2);tile(11,9,2);tile(9,10,1,3);tile(10,12);
+ tile(7,14,1);tile(8,15,3);tile(11,14,1);
+ if(variant===1){
+   // Side-parted hair and square glasses.
+   tile(4,5,5,2);tile(4,7,2);tile(10,4,1,2,0);
+   tile(5,8,4);tile(10,8,4);tile(5,10,4);tile(10,10,4);
+   tile(5,9);tile(8,9);tile(10,9);tile(13,9);tile(9,9);tile(6,9,2,1,0);tile(11,9,2,1,0);
+ }else if(variant===2){
+   // Longer hair, a fringe and a gentle smile.
+   tile(2,5,2,12);tile(15,5,2,12);tile(1,10,1,7);tile(17,10,1,7);
+   tile(3,17,3);tile(13,17,3);tile(4,5,8,2);tile(4,7,5);tile(4,8,2);
+   tile(6,8,2);tile(11,8,2);tile(9,10,1,1,0);
+ }else if(variant===3){
+   // Short curls and a full beard.
+   tile(5,1,2);tile(9,1,2);tile(13,2,2);tile(3,3,2);tile(5,5,2,2);tile(9,5,2);tile(13,5,2,2);
+   tile(4,13,2,3);tile(13,13,2,3);tile(5,15,9,2);tile(7,18,5);
+   tile(6,13,7);tile(8,14,3,1,0);tile(9,16,1,1,0);
+ }else{
+   // Swept-up hair and rounder, open features.
+   tile(7,0,5);tile(5,1,8);tile(4,5,10);tile(4,6,3);tile(4,7,1);
+   tile(6,8,2);tile(11,8,2);tile(6,9,2,1,0);tile(11,9,2,1,0);tile(7,10);tile(12,10);
+   tile(9,10,1,1,0);tile(7,14,5);tile(8,15,3,1,0);
+ }
+ const unit=Math.max(2,Math.floor(Math.min(w/25,h/27))),ox=Math.round((w-19*unit)/2),oy=Math.round((h-21*unit)/2);
+ grid.forEach((row,y)=>row.forEach((filled,x)=>{if(filled)ctx.fillRect(ox+x*unit,oy+y*unit,unit-.6,unit-.6);}));
+}
+
+function drawTeam(){ $$('[data-glyph]').forEach(c=>{const w=c.clientWidth,h=c.clientHeight;if(!w)return;const ctx=fitCanvas(c,w,h);ctx.clearRect(0,0,w,h);ctx.fillStyle=ink();const kind=c.dataset.glyph;if(kind.startsWith('portrait-')){drawPortrait(ctx,w,h,Number(kind.slice(-1)));return;}const u=Math.floor(Math.min(w/17,h/14));if(kind==='design'){const x=(w-u*9)/2,y=(h-u*9)/2;for(let row=0;row<9;row++)for(let col=0;col<9;col++)if(row===0||row===8||col===0||col===8||row===4||col===4)ctx.fillRect(x+col*u,y+row*u,u-.5,u-.5);}if(kind==='code'){pixelText(ctx,'UI',(w-11*u)/2,(h-7*u)/2,u,.5);}if(kind==='system'){const x=(w-u*11)/2,y=(h-u*11)/2;for(let row=0;row<11;row++)for(let col=0;col<11;col++){const tile=(row<4||row>6)&&(col<4||col>6);const bridge=(row===5&&col>1&&col<9)||(col===5&&row>1&&row<9);if(tile||bridge)ctx.fillRect(x+col*u,y+row*u,u-.6,u-.6);}}if(kind==='growth'){const x=(w-u*10)/2,y=(h+u*8)/2;for(let col=0;col<10;col++)for(let row=0;row<=col*.8;row++)ctx.fillRect(x+col*u,y-row*u,u-.6,u-.6);}});}
 
 // A small, self-contained pixel breakout interaction, inspired by the reference footer.
 const gameCanvas=$('#breakout'),gamePanel=$('#game-panel'),play=$('#play-button'),wordPanel=$('.pixel-word');

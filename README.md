@@ -33,3 +33,11 @@ Three decorative images were created with built-in Imagegen: `dist/assets/review
 ## Review styling update
 
 The review section now reuses the team’s canvas pixel icon system, solid hairline rules, shared text links and site typography. The four visual panels retain staggered heights. The former photographic review layout is preserved at tag `saved-photo-reviews` and saved Site version 4. Its raster assets remain available but are not loaded by the current page. Both locales, themes and disclosure behaviour are supported.
+
+## Hero IT team
+
+The opening scene uses the same monochrome pixel grid as the rest of the site. A developer types and completes a build, a designer assembles a wireframe, and a technician checks a server rack. Small packets connect the stations. Narrow screens show two stations. The existing motion pause, reduced-motion preference, offscreen visibility and light/dark theme behaviours are preserved. The prior scene is saved at tag `saved-before-pixel-it-team` and Site version 5.
+
+The wordmark now uses `<s-aim/>`. Studio facts use a shared large-number treatment: 15+ years, 6 service areas, 1 team. The opening section rules align on desktop.
+
+Review illustrations are four fictional monochrome pixel portraits, matching the studio tile grid. Sample testimonial labels remain visible.
