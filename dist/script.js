@@ -65,6 +65,46 @@ $$('[data-reveal],[data-split]').forEach(el => reveal.observe(el));
 root.classList.add('js');
 $('.hero').classList.add('grain');
 
+// Service columns open on pointer entry, keyboard focus or a tap.
+const serviceGroup = $('[data-service-panels]');
+const servicePanels = $$('.service-panel');
+const serviceDesktop = matchMedia('(min-width: 751px) and (hover: hover) and (pointer: fine)');
+let activeService = null;
+function openService(panel) {
+  activeService = panel;
+  servicePanels.forEach(item => {
+    const open = item === panel;
+    item.classList.toggle('is-open', open);
+    item.querySelector('.service-panel-toggle').setAttribute('aria-expanded', String(open));
+    item.querySelector('.service-panel-body').inert = !open;
+  });
+}
+servicePanels.forEach(panel => {
+  const button = panel.querySelector('.service-panel-toggle');
+  panel.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse' && serviceDesktop.matches) openService(panel);
+  });
+  button.addEventListener('click', () => {
+    openService(serviceDesktop.matches ? panel : activeService === panel ? null : panel);
+  });
+  panel.addEventListener('focusin', () => { if (serviceDesktop.matches) openService(panel); });
+  panel.addEventListener('keydown', event => {
+    if (event.key === 'Escape') { button.focus({preventScroll:true}); openService(null); }
+  });
+});
+serviceGroup.addEventListener('pointerleave', () => {
+  if (serviceDesktop.matches && !serviceGroup.contains(document.activeElement)) openService(null);
+});
+serviceGroup.addEventListener('focusout', event => {
+  if (!serviceGroup.contains(event.relatedTarget)) openService(null);
+});
+serviceDesktop.addEventListener('change', () => openService(null));
+$$('[data-service-choice]').forEach(link => link.addEventListener('click', () => {
+  const select = $('#contact-form select[name="service"]');
+  const option = [...select.options].find(item => item.textContent === link.dataset.serviceChoice);
+  if (option) select.value = option.value;
+}));
+
 // Full-screen navigation keeps focus inside the open menu.
 const menu = $('#menu-panel'), menuButton = $('.menu-toggle');
 let closeTimer, previousFocus;

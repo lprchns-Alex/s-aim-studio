@@ -4,7 +4,7 @@ Studio homepage in English and Russian. Static files live in `dist/`; no build s
 
 ## Design and interaction
 
-Desktop homepage inspired by the Havu reference: monochrome typography, generous spacing, pixel artwork, letter-by-letter heading reveals, scroll transitions, moving marquees, sticky service cards, animated diagram, full-screen navigation, light/dark themes, FAQ accordion and a keyboard-playable pixel breakout footer. Original pixel assets are rendered in canvas and SVG. Reduced motion and a manual motion toggle are supported.
+Desktop homepage inspired by the Havu reference: monochrome typography, generous spacing, pixel artwork, letter-by-letter heading reveals, scroll transitions, moving marquees, six expanding service columns, animated diagram, full-screen navigation, light/dark themes, FAQ accordion and a keyboard-playable pixel breakout footer. Original pixel assets are rendered in canvas and SVG. Reduced motion and a manual motion toggle are supported.
 
 ## Content
 
@@ -19,3 +19,7 @@ English is at `/` and Russian at `/ru/`. The RU / EN switch preserves the curren
 ## Preserved version
 
 The earlier green Russian design is preserved in Git at tag `saved-green-v1`, commit `6e14403df2270af9ba48999d6bdcbb81b3e90c3b`. Its three generated CGI images remain in `dist/assets/` for reuse but are not loaded by this homepage.
+
+## Services interaction
+
+The services section follows the Moremedia reference: equal vertical columns expand on hover, with readable lists and links to the contact form. Keyboard and tap controls are available; narrow screens use a vertical accordion. Selecting an offering preselects its service category in the local brief. The complete bilingual version before this change is preserved at Git tag `saved-bilingual-before-service-panels` and saved Site version 3.
