@@ -78,7 +78,8 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 @media(min-width:651px){#challenges .section-label{line-height:20px}#challenges .issue-list{padding-top:9.5px}}
 .brand{white-space:nowrap;letter-spacing:-1.8px}
 
-/* Optical alignment: brackets share the wordmark height and centerline. */
-.brand{gap:.035em;align-items:center}
-.brand-name{display:block;line-height:1}
-.brand .brand-bracket{display:block;width:.43em;height:.84em;flex:none;overflow:visible;fill:none;stroke:currentColor;stroke-width:3.6;stroke-linecap:square;stroke-linejoin:miter;transform:translateY(.025em)}
+/* Pixel wordmark uses the same 5 × 7 letterforms as the opening animation. */
+.brand{gap:0;line-height:1}
+.brand .brand-pixels{display:block;width:116px;height:28px;fill:currentColor;flex:none}
+.footer-nav .brand .brand-pixels{width:145px;height:35px}
+@media(max-width:400px){.header .brand .brand-pixels{width:87px;height:21px}}
