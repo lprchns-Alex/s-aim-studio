@@ -41,3 +41,6 @@ The opening scene uses the same monochrome pixel grid as the rest of the site. A
 The wordmark now uses `<s-aim/>`. Studio facts use a shared large-number treatment: 15+ years, 6 service areas, 1 team. The opening section rules align on desktop.
 
 Review illustrations are four fictional monochrome pixel portraits, matching the studio tile grid. Sample testimonial labels remain visible.
+
+## Deferred company copy
+The Approach and Connection sections were removed from both homepages at the user’s request. Their full Russian and English copy is preserved in `content-archive/company-copy.md`, with original section markup alongside it. Keep this content for a future placement; do not reinsert automatically.
