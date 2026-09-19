@@ -234,51 +234,11 @@ const heroCanvas=$('#hero-pixels');
 let heroVisible=true,footerVisible=false,phase=0;
 const sceneObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.target.id==='hero')heroVisible=e.isIntersecting;else footerVisible=e.isIntersecting;}));
 sceneObserver.observe($('#hero'));sceneObserver.observe($('#footer-pixels'));
-// A second, quiet pixel scene lives above the headline in its own reserved space.
-function drawHeroSky(t){
- const canvas=$('#hero-sky'),w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;
- const ctx=fitCanvas(canvas,w,h);ctx.clearRect(0,0,w,h);ctx.fillStyle=ink();
- const u=2,phase=(t%7200)/7200,beat=Math.floor(t/500)%2;
- const centers=w<600?[w*.22,w*.78]:[w*.15,w*.5,w*.85];
- function rect(x,y,a=1,b=1){ctx.fillRect(x*u,y*u,a*u,b*u);}
- function box(x,y,a,b){rect(x,y,a);rect(x,y+b-1,a);rect(x,y,1,b);rect(x+a-1,y,1,b);}
- function icon(x,index,draw){ctx.save();ctx.translate(Math.round(x-24),12+Math.round(Math.sin(t/1300+index*2)*2)*2);draw();ctx.restore();}
- icon(centers[0],0,()=>{
-   box(0,0,25,19);rect(1,4,23);rect(3,2);rect(6,2);
-   rect(4,7,3);rect(6,8);rect(4,9,2);
-   for(let row=0;row<3;row++){const length=Math.min(12,Math.max(0,Math.floor(phase*48)-row*12));if(length)rect(10,7+row*3,length);}
-   if(beat)rect(4,14,3);
- });
- if(w>=600)icon(centers[1],1,()=>{
-   box(0,0,25,19);rect(1,4,23);rect(3,2);rect(6,2);
-   box(3,7,7,9);rect(12,7,9);rect(12,10,6);rect(12,13,8);
-   const x=Math.round(phase<.5?27-phase*32:11),y=Math.round(phase<.5?21-phase*24:9);
-   rect(x,y,1,6);rect(x+1,y+1,1,4);rect(x+2,y+2,1,2);rect(x+2,y+5);rect(x+3,y+6);
-   if(phase>.7){rect(5,11);rect(6,12);rect(7,11);rect(8,10);}
- });
- icon(centers[centers.length-1],2,()=>{
-   rect(7,1,10);rect(4,2,3);rect(17,2,3);rect(3,3,1,4);rect(20,3,1,4);
-   rect(1,7,3);rect(21,7,3);rect(0,8,1,6);rect(24,8,1,6);rect(1,14,23);
-   rect(12,6,1,6);rect(11,7);rect(10,8);rect(13,7);rect(14,8);
-   box(5,18,15,4);const progress=Math.max(1,Math.floor(phase*12));rect(7,19,progress);
-   if(beat){rect(26,3);rect(28,5);}
- });
- // Small packets move between the scenes without crossing the headline.
- ctx.globalAlpha=.35;
- for(let i=0;i<centers.length-1;i++){
-   const start=centers[i]+38,end=centers[i+1]-38;
-   if(end-start<35)continue;
-   const x=Math.round(start+(end-start)*((phase+i*.35)%1));ctx.fillRect(x,35,4,4);ctx.fillRect(x-8,35,2,4);
- }
- ctx.globalAlpha=1;
-}
-
 function drawHero(t){
- drawHeroSky(t);
  const w=heroCanvas.clientWidth,h=heroCanvas.clientHeight;if(!w||!h)return;
  const ctx=fitCanvas(heroCanvas,w,h);ctx.clearRect(0,0,w,h);
- const unit=w>=1500?4:w>=600?3:2;
- const baseline=Math.floor(h-3),color=ink(),paper=theme==='dark'?'#111110':'#fcfcfb';
+ const unit=w>=1000?4:w>=650?3:2;
+ const baseline=Math.floor(h-45),color=ink(),paper=theme==='dark'?'#191918':'#f6f5f3';
  const beat=Math.floor(t/230)%2,cycle=(t%10000)/10000;
  // All positions sit on the same integer pixel grid as the original characters.
  function station(center,draw){ctx.save();ctx.translate(Math.round(center-17*unit),baseline);ctx.fillStyle=color;draw();ctx.restore();}
@@ -330,24 +290,36 @@ function drawHero(t){
    // Small terminal next to the rack, with a visibly progressing build.
    outline(0,-7,6,5);p(0,-2,7,1);p(1,-5,Math.max(1,Math.floor(cycle*4)),1);
  }
- const centers=w<600?[w*.22,w*.76]:[w*.18,w*.5,w*.82];
- station(centers[0],coder);
- if(w>=600)station(centers[1],designer);
- station(centers[centers.length-1],engineer);
- // Tiny packets travel between the workstations; a completed build travels onward.
- if(w>=600){
-   ctx.fillStyle=color;
-   for(let i=0;i<centers.length-1;i++){
-     const from=centers[i]+23*unit,to=centers[i+1]-20*unit;
-     if(to<=from)continue;
-     const progress=((t+i*1800)%5200)/5200;
-     if(progress>.1&&progress<.85){
-       const x=Math.round(from+(to-from)*(progress-.1)/.75);
-       ctx.globalAlpha=.5;ctx.fillRect(x,baseline-4*unit,2*unit,unit);
-       ctx.fillRect(x-3*unit,baseline-4*unit,unit,unit);ctx.globalAlpha=1;
-     }
-   }
+ function marketer(){
+   head(3,-20);p(4,-14,4,8);p(4,-6,2,5);p(8,-6,2,5);p(3,-1,4);p(8,-1,4);
+   p(8,-12,5);p(12,-14+beat,1,3);p(2,-13,2,5);
+   outline(15,-27,20,18);p(16,-23,18);p(17,-25);p(19,-25);
+   for(let col=0;col<4;col++){const height=2+col*2+(beat&&col===3?1:0);p(18+col*4,-12-height,2,height);}
+   p(24,-9,2,8);p(20,-1,10);
  }
+ const centers=w<650?[w*.22,w*.77]:w<1000?[w*.17,w*.5,w*.83]:[w*.13,w*.38,w*.63,w*.87];
+ // One shared floor and overhead data bus make this a single studio scene.
+ ctx.fillStyle=color;ctx.globalAlpha=.12;ctx.fillRect(0,baseline+unit,w,1);
+ for(let x=12;x<w;x+=24){ctx.fillRect(x,baseline+unit+16,2,2);}
+ ctx.globalAlpha=1;
+ const hubX=Math.round(w/2),busY=38;
+ ctx.globalAlpha=.2;ctx.fillRect(centers[0],busY,centers[centers.length-1]-centers[0],1);
+ centers.forEach(x=>ctx.fillRect(Math.round(x),busY,1,Math.max(0,baseline-31*unit-busY)));
+ ctx.globalAlpha=1;
+ // A shared build window ticks through its stages above the workstations.
+ const hx=hubX-42,hy=16;ctx.fillStyle=paper;ctx.fillRect(hx-8,hy-5,100,47);ctx.fillStyle=color;
+ ctx.fillRect(hx,hy,84,2);ctx.fillRect(hx,hy+34,84,2);ctx.fillRect(hx,hy,2,36);ctx.fillRect(hx+82,hy,2,36);
+ ctx.fillRect(hx+8,hy+9,4,4);ctx.fillRect(hx+16,hy+9,4,4);
+ for(let i=0;i<6;i++){ctx.globalAlpha=cycle*7>i?1:.15;ctx.fillRect(hx+9+i*11,hy+22,7,5);}ctx.globalAlpha=1;
+ centers.forEach((x,i)=>{const progress=((t+i*1200)%4000)/4000;const y=busY+(baseline-31*unit-busY)*progress;ctx.fillRect(Math.round(x)-2,Math.round(y),4,4);});
+ station(centers[0],coder);
+ if(w>=650)station(centers[1],designer);
+ if(w>=1000)station(centers[2],marketer);
+ station(centers[centers.length-1],engineer);
+ // A small delivery bot carries a build from one end of the studio to the other.
+ const route=(t%18000)/18000,rx=Math.round(10+(w-44)*route),ry=baseline+unit+12;
+ ctx.fillRect(rx,ry,22,12);ctx.fillRect(rx+4,ry-4,14,4);ctx.fillStyle=paper;ctx.fillRect(rx+14,ry+3,4,3);ctx.fillStyle=color;
+ ctx.fillRect(rx+3,ry+12,4,4);ctx.fillRect(rx+16,ry+12,4,4);
 }
 function drawFooter(){const c=$('#footer-pixels'),w=c.clientWidth,h=c.clientHeight;if(!w)return;const ctx=fitCanvas(c,w,h),text=ui.footer,data=pixelPoints(text),u=Math.min(w/data.width,22);ctx.clearRect(0,0,w,h);ctx.fillStyle='#f0f0ec';pixelText(ctx,text,(w-data.width*u)/2,(h-7*u)/2,u,.8);}
 // Four fictional portraits, using the same monochrome tile grid as the studio art.

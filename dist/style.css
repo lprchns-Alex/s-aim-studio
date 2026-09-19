@@ -99,3 +99,9 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 /* Each marquee repeats two equally wide, fully populated groups. */
 .marquee-group{display:flex;flex-shrink:0;width:max-content}
 .marquee-group>span{flex-shrink:0;white-space:nowrap;padding-right:24px}
+
+/* A single animated studio banner beneath the headline. */
+.hero-title-wrap{padding-top:48px;justify-content:flex-start}
+.hero-title,html[lang=ru] .hero-title{font-size:clamp(40px,4.7vw,76px);line-height:1.22;padding-bottom:0}
+.pixel-stage{position:relative;inset:auto;height:300px;flex:none;margin-top:32px;background:var(--surface);border-top:1px solid var(--line)}
+@media(max-width:650px){.hero-title-wrap{padding-top:32px}.hero-title,html[lang=ru] .hero-title{font-size:clamp(32px,7.7vw,46px)}.pixel-stage{height:230px;margin-top:28px}}
