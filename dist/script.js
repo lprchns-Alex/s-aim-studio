@@ -160,6 +160,29 @@ if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
   cta.addEventListener('pointerleave',()=>{cta.style.transform='';});
 }
 
+// Two identical groups guarantee a full-width, seamless marquee at every size.
+$$('.capability-marquees .marquee').forEach(viewport=>{
+ const track=viewport.querySelector('.marquee-track');
+ const source=track.firstElementChild.cloneNode(true);
+ const duration=parseFloat(getComputedStyle(track).animationDuration)||52;
+ let lastWidth=0,queued=0;
+ function fill(force=false){
+  const width=viewport.clientWidth;if(!width||(!force&&width===lastWidth))return;
+  lastWidth=width;
+  const group=document.createElement('div');group.className='marquee-group';
+  group.append(source.cloneNode(true));track.replaceChildren(group);
+  const itemWidth=group.firstElementChild.getBoundingClientRect().width;
+  if(!itemWidth)return;
+  const count=Math.ceil(width/itemWidth)+1;
+  track.style.animationDuration=`${duration*count}s`;
+  for(let i=1;i<count;i++){const copy=source.cloneNode(true);copy.setAttribute('aria-hidden','true');group.append(copy);}
+  const twin=group.cloneNode(true);twin.setAttribute('aria-hidden','true');track.append(twin);
+ }
+ fill();
+ document.fonts.ready.then(()=>fill(true));
+ new ResizeObserver(()=>{cancelAnimationFrame(queued);queued=requestAnimationFrame(()=>fill());}).observe(viewport);
+});
+
 // Original 5 × 7 pixel lettering shared by the loader, hero and footer.
 const glyphs={
  A:['01110','10001','10001','11111','10001','10001','10001'], B:['11110','10001','10001','11110','10001','10001','11110'], C:['01111','10000','10000','10000','10000','10000','01111'],

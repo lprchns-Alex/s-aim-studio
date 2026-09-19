@@ -95,3 +95,7 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 .contact-heading{min-width:0}
 .contact-heading .contact-info{margin-top:56px}
 @media(max-width:750px){.contact-heading .contact-info{margin-top:32px}}
+
+/* Each marquee repeats two equally wide, fully populated groups. */
+.marquee-group{display:flex;flex-shrink:0;width:max-content}
+.marquee-group>span{flex-shrink:0;white-space:nowrap;padding-right:24px}
