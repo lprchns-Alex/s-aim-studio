@@ -105,3 +105,8 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 .hero-title,html[lang=ru] .hero-title{font-size:clamp(40px,4.7vw,76px);line-height:1.22;padding-bottom:0}
 .pixel-stage{position:relative;inset:auto;height:300px;flex:none;margin-top:32px;background:var(--surface);border-top:1px solid var(--line)}
 @media(max-width:650px){.hero-title-wrap{padding-top:32px}.hero-title,html[lang=ru] .hero-title{font-size:clamp(32px,7.7vw,46px)}.pixel-stage{height:230px;margin-top:28px}}
+
+/* Share spare hero height equally above and below the studio banner. */
+.hero-title-wrap{row-gap:32px;padding-bottom:32px}
+.pixel-stage{margin-block:auto}
+@media(max-width:650px){.hero-title-wrap{row-gap:28px;padding-bottom:28px}}
