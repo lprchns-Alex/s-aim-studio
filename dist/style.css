@@ -110,3 +110,7 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 .hero-title-wrap{row-gap:32px;padding-bottom:32px}
 .pixel-stage{margin-block:auto}
 @media(max-width:650px){.hero-title-wrap{row-gap:28px;padding-bottom:28px}}
+
+/* Let the studio background fill the hero, keeping only small outer gaps. */
+.pixel-stage{flex:1 0 300px;min-height:300px;height:auto;margin-block:0}
+@media(max-width:650px){.pixel-stage{flex-basis:230px;min-height:230px}}
