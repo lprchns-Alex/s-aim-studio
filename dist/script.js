@@ -209,9 +209,49 @@ if (!paused && !location.hash) {
 
 const heroCanvas=$('#hero-pixels');
 let heroVisible=true,footerVisible=false,phase=0;
-const sceneObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.target===heroCanvas)heroVisible=e.isIntersecting;else footerVisible=e.isIntersecting;}));
-sceneObserver.observe(heroCanvas);sceneObserver.observe($('#footer-pixels'));
+const sceneObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.target.id==='hero')heroVisible=e.isIntersecting;else footerVisible=e.isIntersecting;}));
+sceneObserver.observe($('#hero'));sceneObserver.observe($('#footer-pixels'));
+// A second, quiet pixel scene lives above the headline in its own reserved space.
+function drawHeroSky(t){
+ const canvas=$('#hero-sky'),w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;
+ const ctx=fitCanvas(canvas,w,h);ctx.clearRect(0,0,w,h);ctx.fillStyle=ink();
+ const u=2,phase=(t%7200)/7200,beat=Math.floor(t/500)%2;
+ const centers=w<600?[w*.22,w*.78]:[w*.15,w*.5,w*.85];
+ function rect(x,y,a=1,b=1){ctx.fillRect(x*u,y*u,a*u,b*u);}
+ function box(x,y,a,b){rect(x,y,a);rect(x,y+b-1,a);rect(x,y,1,b);rect(x+a-1,y,1,b);}
+ function icon(x,index,draw){ctx.save();ctx.translate(Math.round(x-24),12+Math.round(Math.sin(t/1300+index*2)*2)*2);draw();ctx.restore();}
+ icon(centers[0],0,()=>{
+   box(0,0,25,19);rect(1,4,23);rect(3,2);rect(6,2);
+   rect(4,7,3);rect(6,8);rect(4,9,2);
+   for(let row=0;row<3;row++){const length=Math.min(12,Math.max(0,Math.floor(phase*48)-row*12));if(length)rect(10,7+row*3,length);}
+   if(beat)rect(4,14,3);
+ });
+ if(w>=600)icon(centers[1],1,()=>{
+   box(0,0,25,19);rect(1,4,23);rect(3,2);rect(6,2);
+   box(3,7,7,9);rect(12,7,9);rect(12,10,6);rect(12,13,8);
+   const x=Math.round(phase<.5?27-phase*32:11),y=Math.round(phase<.5?21-phase*24:9);
+   rect(x,y,1,6);rect(x+1,y+1,1,4);rect(x+2,y+2,1,2);rect(x+2,y+5);rect(x+3,y+6);
+   if(phase>.7){rect(5,11);rect(6,12);rect(7,11);rect(8,10);}
+ });
+ icon(centers[centers.length-1],2,()=>{
+   rect(7,1,10);rect(4,2,3);rect(17,2,3);rect(3,3,1,4);rect(20,3,1,4);
+   rect(1,7,3);rect(21,7,3);rect(0,8,1,6);rect(24,8,1,6);rect(1,14,23);
+   rect(12,6,1,6);rect(11,7);rect(10,8);rect(13,7);rect(14,8);
+   box(5,18,15,4);const progress=Math.max(1,Math.floor(phase*12));rect(7,19,progress);
+   if(beat){rect(26,3);rect(28,5);}
+ });
+ // Small packets move between the scenes without crossing the headline.
+ ctx.globalAlpha=.35;
+ for(let i=0;i<centers.length-1;i++){
+   const start=centers[i]+38,end=centers[i+1]-38;
+   if(end-start<35)continue;
+   const x=Math.round(start+(end-start)*((phase+i*.35)%1));ctx.fillRect(x,35,4,4);ctx.fillRect(x-8,35,2,4);
+ }
+ ctx.globalAlpha=1;
+}
+
 function drawHero(t){
+ drawHeroSky(t);
  const w=heroCanvas.clientWidth,h=heroCanvas.clientHeight;if(!w||!h)return;
  const ctx=fitCanvas(heroCanvas,w,h);ctx.clearRect(0,0,w,h);
  const unit=w>=1500?4:w>=600?3:2;

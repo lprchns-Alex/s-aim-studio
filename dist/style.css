@@ -83,3 +83,9 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 .brand .brand-pixels{display:block;width:116px;height:28px;fill:currentColor;flex:none}
 .footer-nav .brand .brand-pixels{width:145px;height:35px}
 @media(max-width:400px){.header .brand .brand-pixels{width:87px;height:21px}}
+
+/* Reserve a separate upper lane for the animated IT motifs. */
+.hero-title-wrap{padding-top:115px}
+.pixel-sky{position:absolute;top:18px;left:0;right:0;height:72px;pointer-events:none}
+.pixel-sky canvas{display:block;width:100%;height:100%}
+@media(max-width:650px){.hero-title-wrap{padding-top:105px}.pixel-sky{top:14px}}
