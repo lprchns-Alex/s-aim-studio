@@ -127,3 +127,9 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 .contact-pixel-icon{width:16px;height:16px;fill:currentColor;flex:none}
 .hero{min-height:calc(100svh - 110px)}
 @media(max-width:650px){.header-contact-strip{height:66px;align-content:center;flex-wrap:wrap;gap:8px;padding:8px 0}.header-contact-strip>div{gap:14px}.header-contact-strip .header-contact-direct{width:100%;justify-content:space-between}.header-contact-direct>span{display:none}.hero{min-height:calc(100svh - 134px)}}
+
+/* Keep navigation and contacts visible while preserving the page layout. */
+.sticky-header{position:sticky;top:0;z-index:40;background:var(--paper);box-shadow:0 1px 0 var(--line)}
+.site-top-anchor{height:0}
+html{scroll-padding-top:134px}
+@media(max-width:650px){html{scroll-padding-top:154px}}
