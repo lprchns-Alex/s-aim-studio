@@ -118,3 +118,12 @@ html[data-theme=dark] .service-panels{--service-open:#272726}
 /* Full desktop navigation; the compact menu remains on smaller screens. */
 @media(min-width:1200px){.header .menu-toggle{display:none}.header-links{gap:clamp(16px,1.8vw,30px);font-size:14px;white-space:nowrap}.header-controls{gap:18px}.header{gap:24px}}
 @media(max-width:1199px){.header-links{display:none}.header-controls{margin-left:auto}}
+
+/* Slim contact strip, matching the approved header concept. */
+.header-contact-strip{height:42px;margin:0 var(--pad);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.4}
+.header-contact-strip>div{display:flex;align-items:center;gap:20px}
+.header-contact-strip a{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;transition:color .2s}
+.header-contact-strip a:hover{color:var(--ink)}
+.contact-pixel-icon{width:16px;height:16px;fill:currentColor;flex:none}
+.hero{min-height:calc(100svh - 110px)}
+@media(max-width:650px){.header-contact-strip{height:66px;align-content:center;flex-wrap:wrap;gap:8px;padding:8px 0}.header-contact-strip>div{gap:14px}.header-contact-strip .header-contact-direct{width:100%;justify-content:space-between}.header-contact-direct>span{display:none}.hero{min-height:calc(100svh - 134px)}}

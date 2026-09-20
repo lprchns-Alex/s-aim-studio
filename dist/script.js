@@ -117,6 +117,7 @@ function setMenu(open) {
   document.body.style.overflow = open ? 'hidden' : '';
   if (open) {
     previousFocus = document.activeElement;
+    menu.style.top = Math.max(0, document.querySelector(".header").getBoundingClientRect().bottom) + "px";
     menu.hidden = false;
     requestAnimationFrame(()=>requestAnimationFrame(()=>{menu.classList.add('is-open'); menu.querySelector('a').focus({preventScroll:true});}));
   } else {
