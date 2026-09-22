@@ -1,5 +1,7 @@
 # S–AIM
 
+Source storage: private GitHub repository. No automatic deployment or hosted preview. See AGENTS.md for publishing restrictions. Canonical and hreflang metadata must be configured after a production domain is approved.
+
 Studio homepage in English and Russian. Static files live in `dist/`; no build step or package installation is needed. Run `python3 -m http.server 4173 --directory dist` for a local preview.
 
 ## Design and interaction
