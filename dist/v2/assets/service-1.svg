@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title"><title id="title">Website design: oversized editorial typography</title><defs><pattern id="grain" width="31" height="29" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r=".65" fill="#000" opacity=".09"/><circle cx="21" cy="18" r=".6" fill="#fff" opacity=".15"/><circle cx="12" cy="26" r=".45" fill="#000" opacity=".07"/></pattern></defs><rect width="960" height="600" fill="#c3c5b6"/>
+<path d="M0 505L960 216V600H0Z" fill="#b1b4a4"/>
+<g transform="translate(112 55) rotate(-4 373 246)">
+<rect x="-8" y="7" width="763" height="507" rx="13" fill="#686d5a" opacity=".3"/>
+<rect width="748" height="491" rx="10" fill="#1b1e1b"/>
+<circle cx="22" cy="19" r="3" fill="#dcdfcd"/><circle cx="34" cy="19" r="3" fill="#84897b"/><circle cx="46" cy="19" r="3" fill="#84897b"/>
+<rect x="287" y="12" width="180" height="13" rx="6" fill="#33372f"/>
+<rect x="11" y="38" width="726" height="441" fill="#ecebdf"/>
+<text x="37" y="71" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="17" letter-spacing="-1">S—AIM</text>
+<path d="M602 58h29M648 58h29M694 54h17m-17 5h17m-17 5h17" stroke="#1b1e1b" stroke-width="2"/>
+<path d="M36 91H711" stroke="#1b1e1b" stroke-width="1"/>
+<text x="19" y="423" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="419" letter-spacing="-24" fill="#1b1e1b">S</text>
+<text x="366" y="200" font-family="Arial,Helvetica,sans-serif" font-size="59" font-weight="700" letter-spacing="-3" fill="#1b1e1b">DIGITAL</text>
+<text x="365" y="252" font-family="Arial,Helvetica,sans-serif" font-size="59" font-weight="700" letter-spacing="-3" fill="#1b1e1b">DESIGN.</text>
+<path d="M371 295h241m-241 10h186m-186 10h214" stroke="#1b1e1b" opacity=".4" stroke-width="3"/>
+<rect x="369" y="351" width="96" height="35" rx="18" fill="#1b1e1b"/><path d="M404 369h28m-7-6l7 6-7 6" fill="none" stroke="#edefdf" stroke-width="1.6"/>
+<path d="M36 438H711" stroke="#1b1e1b"/>
+<text x="37" y="460" font-family="Arial,Helvetica,sans-serif" font-size="9" letter-spacing="1.7" fill="#1b1e1b">STRATEGY · DESIGN · DEVELOPMENT</text>
+<circle cx="699" cy="457" r="7" fill="#989d6b"/>
+</g><rect width="960" height="600" fill="url(#grain)" pointer-events="none"/></svg>

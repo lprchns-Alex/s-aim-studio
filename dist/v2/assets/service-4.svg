@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title"><title id="title">Social media: an abstract editorial card collection</title><defs><pattern id="grain" width="31" height="29" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r=".65" fill="#000" opacity=".09"/><circle cx="21" cy="18" r=".6" fill="#fff" opacity=".15"/><circle cx="12" cy="26" r=".45" fill="#000" opacity=".07"/></pattern></defs><rect width="960" height="600" fill="#b8abc7"/>
+<path d="M0 395L960 218V600H0Z" fill="#a89ab9"/>
+<g transform="translate(132 94) rotate(-10 141 209)">
+<rect x="-7" y="12" width="294" height="415" fill="#695c78" opacity=".16"/>
+<rect width="285" height="416" fill="#e8e0ed"/>
+<text x="22" y="34" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#292532">S—AIM</text>
+<path d="M250 24h13m-13 4h13m-13 4h13" stroke="#292532"/>
+<path d="M18 50h249" stroke="#292532"/>
+<text x="17" y="115" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="700" letter-spacing="-2" fill="#292532">SOCIAL</text>
+<circle cx="142" cy="235" r="102" fill="#8d709d"/>
+<path d="M40 235h204M142 133v204" stroke="#e8e0ed" stroke-width="2"/>
+<path d="M62 176q81 118 160 0M62 294q81-118 160 0" fill="none" stroke="#e8e0ed" stroke-width="2"/>
+<path d="M21 370h109m-109 8h83" stroke="#292532" stroke-width="2"/>
+<circle cx="253" cy="377" r="10" fill="#292532"/>
+</g>
+<g transform="translate(389 57) rotate(7 157 218)">
+<rect x="-6" y="12" width="313" height="452" fill="#5e4d6e" opacity=".2"/>
+<rect width="310" height="447" fill="#292532"/>
+<text x="23" y="36" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#e4d7ef">S—AIM / CULTURE</text>
+<path d="M22 57h266" stroke="#b8abc7"/>
+<g transform="translate(155 224)" fill="#d7c0ec">
+<path d="M-5-130H5V130H-5Z"/><path d="M-5-130H5V130H-5Z" transform="rotate(30)"/><path d="M-5-130H5V130H-5Z" transform="rotate(60)"/><path d="M-5-130H5V130H-5Z" transform="rotate(90)"/><path d="M-5-130H5V130H-5Z" transform="rotate(120)"/><path d="M-5-130H5V130H-5Z" transform="rotate(150)"/>
+<circle r="64" fill="#292532"/><circle r="46" fill="#d7c0ec"/>
+</g>
+<text x="22" y="412" font-family="Arial,Helvetica,sans-serif" font-size="34" letter-spacing="-1.4" fill="#e4d7ef">STAY CURIOUS.</text>
+</g>
+<g transform="translate(660 215) rotate(15 109 146)">
+<rect x="-5" y="8" width="223" height="302" fill="#665672" opacity=".2"/>
+<rect width="216" height="296" fill="#d8e399"/>
+<text x="17" y="28" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700" fill="#292532">S—AIM</text>
+<path d="M19 54h177" stroke="#292532"/>
+<path d="M39 213V96H79V161L140 96H181L126 156L184 228H136L79 162V228H39Z" fill="#292532"/>
+<path d="M18 264h80m-80 7h49" stroke="#292532" stroke-width="2"/>
+</g>
+<rect width="960" height="600" fill="url(#grain)" pointer-events="none"/></svg>

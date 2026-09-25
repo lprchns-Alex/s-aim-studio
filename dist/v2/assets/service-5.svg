@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title"><title id="title">Applications: refined mobile interface compositions</title><defs><pattern id="grain" width="31" height="29" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r=".65" fill="#000" opacity=".09"/><circle cx="21" cy="18" r=".6" fill="#fff" opacity=".15"/><circle cx="12" cy="26" r=".45" fill="#000" opacity=".07"/></pattern></defs><rect width="960" height="600" fill="#113b2e"/>
+<path d="M0 415L960 104V600H0Z" fill="#0e3127"/>
+<path d="M48 44h109m-109 11h68" stroke="#acc6b5" opacity=".5"/>
+<text x="908" y="55" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="2" fill="#c4d8cc">DIGITAL PRODUCTS</text>
+<g transform="translate(129 99) rotate(-8 129 210)">
+<rect x="-8" y="11" width="263" height="433" rx="37" fill="#001d16" opacity=".6"/>
+<rect width="252" height="424" rx="33" fill="#a4bcad"/>
+<rect x="6" y="6" width="240" height="412" rx="29" fill="#e7eee6"/>
+<rect x="91" y="16" width="70" height="16" rx="8" fill="#1c382b"/>
+<text x="26" y="65" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#163b2c">S—AIM</text>
+<circle cx="216" cy="60" r="11" fill="#163b2c"/><path d="M212 60h8m-4-4v8" stroke="#eef2e8"/>
+<text x="25" y="113" font-family="Arial,Helvetica,sans-serif" font-size="34" letter-spacing="-1.5" fill="#163b2c">Your space.</text>
+<rect x="23" y="134" width="206" height="156" rx="9" fill="#164d37"/>
+<g transform="translate(126 211)" fill="none" stroke="#dce8c9" stroke-width="1.3"><ellipse rx="66" ry="39" transform="rotate(45)"/><ellipse rx="66" ry="39" transform="rotate(90)"/><ellipse rx="66" ry="39" transform="rotate(135)"/><ellipse rx="66" ry="39" transform="rotate(0)"/></g>
+<rect x="23" y="305" width="96" height="57" rx="8" fill="#cfdcc8"/><rect x="133" y="305" width="96" height="57" rx="8" fill="#dce4d7"/>
+<path d="M36 323h49m-49 9h31M146 323h49m-49 9h31" stroke="#164d37" stroke-width="2"/>
+<path d="M40 387h174" stroke="#9ead9e"/><rect x="93" y="404" width="65" height="4" rx="2" fill="#1c382b"/>
+</g>
+<g transform="translate(421 65) rotate(7 130 229)">
+<rect x="-7" y="11" width="268" height="465" rx="37" fill="#001d16" opacity=".6"/>
+<rect width="258" height="458" rx="34" fill="#627b68"/>
+<rect x="6" y="6" width="246" height="446" rx="29" fill="#182b20"/>
+<rect x="94" y="17" width="70" height="16" rx="8" fill="#080f0b"/>
+<path d="M25 60h16m-10-6l-6 6 6 6" stroke="#e1edcf" fill="none"/>
+<text x="228" y="64" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#e1edcf">S—AIM</text>
+<circle cx="129" cy="174" r="79" fill="none" stroke="#344939" stroke-width="13"/>
+<path d="M74 229a79 79 0 1 1 113-8" fill="none" stroke="#d9e9a3" stroke-width="13" stroke-linecap="round"/>
+<path d="M103 177l18 18 38-41" fill="none" stroke="#e1edcf" stroke-width="4"/>
+<rect x="23" y="282" width="212" height="53" rx="8" fill="#294030"/>
+<circle cx="47" cy="308" r="10" fill="#d9e9a3"/><path d="M69 301h131m-131 12h87" stroke="#cbd8bb" stroke-width="2"/>
+<rect x="23" y="349" width="212" height="49" rx="24.5" fill="#d9e9a3"/><path d="M107 374h44m-8-8l8 8-8 8" fill="none" stroke="#182b20" stroke-width="2"/>
+<rect x="97" y="438" width="64" height="4" rx="2" fill="#8b9c86"/>
+</g>
+<g transform="translate(702 202) rotate(7)"><rect width="155" height="156" rx="25" fill="#d9e9a3"/><path d="M46 107V48H67V72L90 48H115L86 77 117 109H91L67 82V107Z" fill="#183d2a"/></g>
+<rect width="960" height="600" fill="url(#grain)" pointer-events="none"/></svg>

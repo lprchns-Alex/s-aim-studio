@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title"><title id="title">Integrations: connected modular architecture</title><defs><pattern id="grain" width="31" height="29" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r=".65" fill="#000" opacity=".09"/><circle cx="21" cy="18" r=".6" fill="#fff" opacity=".15"/><circle cx="12" cy="26" r=".45" fill="#000" opacity=".07"/></pattern></defs><rect width="960" height="600" fill="#a5aaa7"/>
+<path d="M44 47h872M44 550h872" stroke="#4f5852" opacity=".45"/>
+<text x="45" y="81" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="2" fill="#28352d">CONNECTED SYSTEMS</text>
+<text x="914" y="81" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#28352d">S—AIM</text>
+<g fill="none" stroke="#737c75" stroke-width="1" opacity=".38">
+<path d="M82 425L489 190 892 423M82 425L489 660M149 387L556 622M216 348L623 583M283 309L690 544M350 270L757 505M417 232L824 466M82 425L489 190M149 464L556 229M216 502L623 267M283 541L690 306M350 580L757 344M417 619L824 383"/>
+</g>
+<path d="M224 312L351 385 485 309 684 424M483 215L619 294 750 218M484 307V446" fill="none" stroke="#34483b" stroke-width="3"/>
+<g transform="translate(348 245)">
+<path d="M0 0L132-76 264 0 132 76Z" fill="#edf0e9"/>
+<path d="M0 0L132 76V177L0 101Z" fill="#99a69b"/>
+<path d="M132 76L264 0V101L132 177Z" fill="#617667"/>
+<path d="M22-1L132-64 243-1 132 63Z" fill="none" stroke="#83998a"/>
+<path d="M104-14L131-29 158-14 131 2Z" fill="#234633"/>
+<path d="M91-6L119 10M144 9L172-7M118-33L132-41 145-33" fill="none" stroke="#234633" stroke-width="3"/>
+<path d="M157 104L238 57M157 121L211 90" stroke="#d0dacd" stroke-width="3"/>
+<path d="M23 49L89 87M23 64L67 89" stroke="#3f5847" stroke-width="2"/>
+</g>
+<g transform="translate(129 229)">
+<path d="M0 0L86-49 172 0 86 50Z" fill="#dfe5dc"/><path d="M0 0L86 50V110L0 61Z" fill="#819489"/><path d="M86 50L172 0V61L86 110Z" fill="#566f5e"/>
+<ellipse cx="86" cy="1" rx="37" ry="21" fill="none" stroke="#526f5c" stroke-width="3"/><ellipse cx="86" cy="1" rx="19" ry="11" fill="#526f5c"/>
+<path d="M108 70l42-24" stroke="#dfe5dc" stroke-width="3"/>
+</g>
+<g transform="translate(646 159)">
+<path d="M0 0L85-49 85 15 0 64Z" fill="#e5e9df"/><path d="M85-49L170 0V64L85 15Z" fill="#bac6b8"/><path d="M0 64L85 15 170 64 85 113Z" fill="#617765"/>
+<path d="M13 51L72 17V-27L13 7Z" fill="#3c5944"/><path d="M97-27L157 8V51L97 16Z" fill="#254331"/>
+<path d="M21 18L61-5M21 30L61 7M108-7L148 16M108 5L148 28" stroke="#cbd8c5" stroke-width="2"/>
+</g>
+<g transform="translate(658 388)">
+<path d="M0 0L67-39 134 0 67 39Z" fill="#e5e9de"/><path d="M0 0L67 39V84L0 45Z" fill="#8a9b8b"/><path d="M67 39L134 0V45L67 84Z" fill="#536c59"/>
+<path d="M39 1L67-15 96 1 67 17Z" fill="#264532"/>
+</g>
+<g transform="translate(391 457)">
+<path d="M0 0L88-50 176 0 88 51Z" fill="#d0d9cc"/><path d="M0 0L88 51V69L0 18Z" fill="#8c9c8c"/><path d="M88 51L176 0V18L88 69Z" fill="#5b7160"/>
+<path d="M47 0L88-23 129 0 88 24Z" fill="none" stroke="#2c4936" stroke-width="3"/>
+</g>
+<rect width="960" height="600" fill="url(#grain)" pointer-events="none"/></svg>

@@ -46,3 +46,9 @@ Review illustrations are four fictional monochrome pixel portraits, matching the
 
 ## Deferred company copy
 The Approach and Connection sections were removed from both homepages at the user’s request. Their full Russian and English copy is preserved in `content-archive/company-copy.md`, with original section markup alongside it. Keep this content for a future placement; do not reinsert automatically.
+
+## New design / v2
+
+The independent dark design inspired by Lamalama is available at https://lprchns-alex.github.io/s-aim-studio/v2/ru/ (English at /v2/). The original site stays at /ru/ and is preserved by tag saved-before-redesign-2026-09-25.
+
+V2 reuses existing studio copy in tools/v2-content.json. Run python3 tools/build-v2.py to regenerate both language pages. Visual direction: cinematic procedural chrome animation, compact floating navigation, editorial service rows, muted artwork and fine typographic detail. All SVG service artwork and the shader are original. Service visuals illustrate disciplines and are not client case studies. Motion can be paused and follows the device reduced-motion preference. The contact form remains a local preview with text download.

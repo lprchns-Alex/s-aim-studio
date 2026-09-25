@@ -1,0 +1,1370 @@
+{
+  "ru": {
+    "language": "ru",
+    "title": "S–AIM — сайты, продвижение и автоматизация",
+    "meta_description": "S–AIM — независимая digital-студия. Более 15 лет создаём сайты, привлекаем клиентов и автоматизируем процессы малого и среднего бизнеса.",
+    "navigation": [
+      {
+        "text": "Услуги",
+        "href": "#services",
+        "title": null
+      },
+      {
+        "text": "Студия",
+        "href": "#about",
+        "title": null
+      },
+      {
+        "text": "Как мы работаем",
+        "href": "#process",
+        "title": null
+      },
+      {
+        "text": "Команда",
+        "href": "#team",
+        "title": null
+      },
+      {
+        "text": "Вопросы и ответы",
+        "href": "#faq",
+        "title": null
+      }
+    ],
+    "header_contacts": [
+      {
+        "text": "+7 (000) 000-00-00",
+        "href": "tel:+70000000000",
+        "title": "Демонстрационный контакт"
+      },
+      {
+        "text": "hello@s-aim.example",
+        "href": "mailto:hello@s-aim.example",
+        "title": "Демонстрационный контакт"
+      },
+      {
+        "text": "Telegram",
+        "href": "#contact",
+        "title": "Демонстрационный контакт — Telegram"
+      },
+      {
+        "text": "WhatsApp",
+        "href": "#contact",
+        "title": "Демонстрационный контакт — WhatsApp"
+      }
+    ],
+    "skip_link": "Перейти к содержанию",
+    "menu": {
+      "navigation": [
+        {
+          "text": "Студия",
+          "href": "#about",
+          "title": null
+        },
+        {
+          "text": "Услуги",
+          "href": "#services",
+          "title": null
+        },
+        {
+          "text": "Складские системы",
+          "href": "#product",
+          "title": null
+        },
+        {
+          "text": "Как мы работаем",
+          "href": "#process",
+          "title": null
+        },
+        {
+          "text": "Команда",
+          "href": "#team",
+          "title": null
+        },
+        {
+          "text": "Вопросы и ответы",
+          "href": "#faq",
+          "title": null
+        },
+        {
+          "text": "Обсудим проект ↗",
+          "href": "#contact",
+          "title": null
+        }
+      ],
+      "footer": "Обсудим проект ↗S–AIM / БОЛЕЕ 15 ЛЕТ НА РЫНКЕ"
+    },
+    "hero": {
+      "kicker": "НЕЗАВИСИМАЯ DIGITAL-СТУДИЯ ДЛЯ МАЛОГО И СРЕДНЕГО БИЗНЕСА",
+      "title": "Мы делаем больше, чем сайты. Объединяем технологии для задач вашего бизнеса.",
+      "title_lines": [
+        "Мы делаем больше, чем сайты.",
+        "Объединяем технологии",
+        "для задач вашего бизнеса."
+      ],
+      "description": "Приходите с задачей — даже без готового ТЗ. Сайты, продвижение, приложения, аналитика и автоматизация силами одной команды.",
+      "cta": "Обсудить ваш проект",
+      "marquee": "Связываем дизайн с разработкой, маркетинг с аналитикой, а сайт — с вашим бизнесом. ／ От первой идеи до работающей системы. ／"
+    },
+    "challenges": {
+      "label": "01 — С ЧЕГО НАЧАТЬ",
+      "title": "Задачи разные. Команда одна.",
+      "title_lines": [
+        "Задачи разные.",
+        "Команда одна."
+      ],
+      "description": "Бизнес растёт, и в какой-то момент привычных цифровых инструментов становится недостаточно. Расскажите, на каком вы этапе. Поможем определить следующий шаг.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Запускаете новый проект",
+          "description": "Есть идея для бизнеса, а для запуска нужен сайт, интернет-магазин или приложение."
+        },
+        {
+          "number": "02",
+          "title": "Сайту пора стать лучше",
+          "description": "Бизнес изменился. Теперь нужно обновить дизайн сайта, расширить возможности или пересмотреть всё вместе."
+        },
+        {
+          "number": "03",
+          "title": "Трафик есть, ясности нет",
+          "description": "Реклама работает, но непонятно, какие каналы приводят клиентов, а какие только расходуют бюджет."
+        },
+        {
+          "number": "04",
+          "title": "Клиенты вас не находят",
+          "description": "Ваша аудитория ищет решения. Нужно быть заметнее в поиске, ответах нейросетей и соцсетях."
+        },
+        {
+          "number": "05",
+          "title": "Системы работают отдельно",
+          "description": "Сайт, складской учёт и внутренние инструменты пора объединить в общий рабочий процесс."
+        },
+        {
+          "number": "06",
+          "title": "Задач сразу несколько",
+          "description": "Нужно, чтобы дизайн, разработка и маркетинг работали на одну цель."
+        }
+      ]
+    },
+    "about": {
+      "label": "02 — О СТУДИИ",
+      "title": "Более 15 лет на рынке. Смотрим вперёд.",
+      "title_lines": [
+        "Более 15 лет на рынке.",
+        "Смотрим вперёд."
+      ],
+      "paragraphs": [
+        "Мы S–AIM — независимая digital-студия для малого и среднего бизнеса.",
+        "За плечами — сайты, интернет-магазины, рекламные кампании, приложения и системы для бизнеса. В каждом новом проекте используем этот опыт и объединяем дизайн, технологии и продвижение."
+      ],
+      "stats": [
+        {
+          "value": "15+",
+          "title": "Лет работы студии",
+          "description": "Опыт разных проектов, платформ и задач бизнеса, который постоянно меняется."
+        },
+        {
+          "value": "6",
+          "title": "Направлений работы",
+          "description": "От сайтов и продвижения до приложений и интеграций. Подключаем нужные компетенции под вашу задачу."
+        },
+        {
+          "value": "1",
+          "title": "Одна команда",
+          "description": "Объединяем дизайн, разработку, продвижение и автоматизацию вокруг общей цели."
+        }
+      ]
+    },
+    "services": {
+      "label": "03 — УСЛУГИ",
+      "title": "От первого сайта до единой системы бизнеса.",
+      "title_lines": [
+        "От первого сайта",
+        "до единой системы бизнеса."
+      ],
+      "description": "Необязательно делать всё сразу. Подключим нужные компетенции на вашем этапе развития.",
+      "categories": [
+        {
+          "number": "01",
+          "title": "Сайты",
+          "description": "Продумываем структуру, создаём дизайн и разрабатываем функциональность. Лендинг, корпоративный сайт или интернет-магазин — в основе всегда ваши цели и то, как клиенты выбирают и покупают.",
+          "offerings": [
+            {
+              "text": "Лендинги",
+              "service_choice": "Дизайн и разработка сайтов"
+            },
+            {
+              "text": "Корпоративные сайты",
+              "service_choice": "Дизайн и разработка сайтов"
+            },
+            {
+              "text": "Сайты-визитки",
+              "service_choice": "Дизайн и разработка сайтов"
+            },
+            {
+              "text": "Интернет-магазины",
+              "service_choice": "Дизайн и разработка сайтов"
+            },
+            {
+              "text": "Веб-дизайн",
+              "service_choice": "Дизайн и разработка сайтов"
+            },
+            {
+              "text": "Фронтенд и бэкенд",
+              "service_choice": "Дизайн и разработка сайтов"
+            }
+          ]
+        },
+        {
+          "number": "02",
+          "title": "SEO и GEO",
+          "description": "Помогаем находить ваш бизнес в поисковых системах и ответах нейросетей. Техническая оптимизация, контент и понятная структура сайта делают информацию о вас доступнее для людей и алгоритмов.",
+          "offerings": [
+            {
+              "text": "Поисковая оптимизация",
+              "service_choice": "SEO и GEO"
+            },
+            {
+              "text": "Оптимизация под нейросети",
+              "service_choice": "SEO и GEO"
+            },
+            {
+              "text": "Техническое SEO",
+              "service_choice": "SEO и GEO"
+            },
+            {
+              "text": "Контент и структура",
+              "service_choice": "SEO и GEO"
+            }
+          ]
+        },
+        {
+          "number": "03",
+          "title": "Реклама",
+          "description": "Планируем и ведём рекламу с учётом аудитории, рынка и ваших целей. От структуры кампаний и креативов до отслеживания обращений — связываем рекламные решения с тем, что происходит после клика.",
+          "offerings": [
+            {
+              "text": "Google Ads",
+              "service_choice": "Контекстная и таргетированная реклама"
+            },
+            {
+              "text": "Яндекс Директ",
+              "service_choice": "Контекстная и таргетированная реклама"
+            },
+            {
+              "text": "ВКонтакте",
+              "service_choice": "Контекстная и таргетированная реклама"
+            },
+            {
+              "text": "Telegram",
+              "service_choice": "Контекстная и таргетированная реклама"
+            },
+            {
+              "text": "Instagram",
+              "service_choice": "Контекстная и таргетированная реклама"
+            },
+            {
+              "text": "Mail.ru",
+              "service_choice": "Контекстная и таргетированная реклама"
+            }
+          ]
+        },
+        {
+          "number": "04",
+          "title": "Соцсети",
+          "description": "От стратегии и визуального стиля до контента и ежедневного ведения — помогаем бизнесу выстроить присутствие в соцсетях. Работаем с разными рынками и платформами по всему миру.",
+          "offerings": [
+            {
+              "text": "SMM-стратегия",
+              "service_choice": "Социальные сети"
+            },
+            {
+              "text": "Создание контента",
+              "service_choice": "Социальные сети"
+            },
+            {
+              "text": "Работа с сообществом",
+              "service_choice": "Социальные сети"
+            },
+            {
+              "text": "Instagram",
+              "service_choice": "Социальные сети"
+            },
+            {
+              "text": "Telegram",
+              "service_choice": "Социальные сети"
+            },
+            {
+              "text": "ВКонтакте",
+              "service_choice": "Социальные сети"
+            }
+          ]
+        },
+        {
+          "number": "05",
+          "title": "Приложения",
+          "description": "Разрабатываем мобильные и специализированные приложения по индивидуальным требованиям. Сервисы для клиентов, внутренние инструменты и автоматизация процессов — определяем возможности под задачу вашего бизнеса.",
+          "offerings": [
+            {
+              "text": "Мобильные приложения",
+              "service_choice": "Приложения и заказная разработка"
+            },
+            {
+              "text": "Специализированное ПО",
+              "service_choice": "Приложения и заказная разработка"
+            },
+            {
+              "text": "Внутренние сервисы",
+              "service_choice": "Приложения и заказная разработка"
+            },
+            {
+              "text": "Индивидуальная разработка",
+              "service_choice": "Приложения и заказная разработка"
+            }
+          ]
+        },
+        {
+          "number": "06",
+          "title": "Интеграции",
+          "description": "Связываем сайты со складскими и учётными системами, в том числе 1С. Настраиваем сквозную аналитику, коллтрекинг и отслеживание обращений в мессенджерах, чтобы видеть источники заявок и вклад каждого канала.",
+          "offerings": [
+            {
+              "text": "Интеграции с 1С",
+              "service_choice": "Интеграции и аналитика"
+            },
+            {
+              "text": "Складские системы",
+              "service_choice": "Интеграции и аналитика"
+            },
+            {
+              "text": "Сквозная аналитика",
+              "service_choice": "Интеграции и аналитика"
+            },
+            {
+              "text": "Коллтрекинг",
+              "service_choice": "Интеграции и аналитика"
+            },
+            {
+              "text": "Мессенджер-трекинг",
+              "service_choice": "Интеграции и аналитика"
+            }
+          ]
+        }
+      ]
+    },
+    "process": {
+      "label": "04 — ПРОЦЕСС",
+      "title": "Разобраться в задаче. Создать. Запустить. Развивать.",
+      "title_lines": [
+        "Разобраться в задаче.",
+        "Создать. Запустить. Развивать."
+      ],
+      "description": "Понятный процесс от первого разговора до следующего этапа.",
+      "steps": [
+        {
+          "number": "ШАГ 01",
+          "title": "Разбираемся",
+          "description": "Изучаем ваш бизнес, аудиторию и задачу, которую нужно решить."
+        },
+        {
+          "number": "ШАГ 02",
+          "title": "Определяем",
+          "description": "Согласуем объём работ, приоритеты, результат, сроки и бюджет."
+        },
+        {
+          "number": "ШАГ 03",
+          "title": "Создаём",
+          "description": "Разрабатываем дизайн, контент, программу или кампанию. Показываем промежуточные результаты."
+        },
+        {
+          "number": "ШАГ 04",
+          "title": "Запускаем",
+          "description": "Проверяем детали, подключаем инструменты и запускаем решение в работу."
+        },
+        {
+          "number": "ШАГ 05",
+          "title": "Развиваем",
+          "description": "Обсуждаем следующие шаги и то, как проект будет расти вместе с бизнесом."
+        }
+      ],
+      "principles_title": "Как строим работу",
+      "principles": [
+        "Сначала согласуем задачу, потом выбираем инструменты",
+        "Фиксируем объём работ и зоны ответственности",
+        "Показываем ход работы на всех этапах",
+        "Проверяем детали перед запуском",
+        "Учитываем дальнейшее развитие бизнеса"
+      ]
+    },
+    "product": {
+      "label": "05 — СОБСТВЕННОЕ РЕШЕНИЕ",
+      "title": "Ваш склад. Ваш сервер. Ваши процессы.",
+      "title_lines": [
+        "Ваш склад.",
+        "Ваш сервер. Ваши процессы."
+      ],
+      "description": "Собственные складские системы с установкой на ваш сервер. Основа для учёта запасов и согласованной работы бизнеса.",
+      "features": [
+        {
+          "label": "Размещение",
+          "description": "Установка на сервер вашей компании"
+        },
+        {
+          "label": "Внедрение",
+          "description": "Настройка под ваши бизнес-процессы"
+        },
+        {
+          "label": "Интеграция",
+          "description": "Связь с сайтом и учётными системами"
+        },
+        {
+          "label": "Возможности",
+          "description": "Подбор функций под задачи команды"
+        }
+      ],
+      "cta": "Обсудить складскую систему"
+    },
+    "capabilities": {
+      "label": "06 — КОМПЕТЕНЦИИ",
+      "title": "Разные направления. Общая цель.",
+      "title_lines": [
+        "Разные направления.",
+        "Общая цель."
+      ],
+      "description": "Приходите с одной задачей или целым проектом. Создадим новое решение, улучшим существующее или объединим то, что уже работает.",
+      "marquees": [
+        "Веб-дизайн / Фронтенд / Бэкенд / SEO / GEO / Google Ads / Соцсети /",
+        "Складские системы / Приложения / Аналитика / 1С / Коллтрекинг / Интеграции /"
+      ]
+    },
+    "team": {
+      "label": "07 — КОМАНДА",
+      "title": "Дизайн, технологии и рост. Работаем одной командой.",
+      "title_lines": [
+        "Дизайн, технологии и рост.",
+        "Работаем одной командой."
+      ],
+      "description": "Разные навыки, общая ответственность за проект. Объединяем тех, кто проектирует интерфейсы, разрабатывает технологии и помогает бизнесу находить свою аудиторию.",
+      "items": [
+        {
+          "title": "Дизайн",
+          "subtitle": "Структура, интерфейсы и визуальный стиль",
+          "description": "Превращаем бизнес-идею в понятный интерфейс — от подачи информации до пути клиента по сайту."
+        },
+        {
+          "title": "Разработка",
+          "subtitle": "Сайты, приложения и интеграции",
+          "description": "Связываем интерфейс с процессами за ним. Фронтенд, бэкенд, приложения и системы для бизнеса."
+        },
+        {
+          "title": "Продвижение",
+          "subtitle": "Поиск, реклама и соцсети",
+          "description": "Объединяем SEO, GEO, рекламу и соцсети, чтобы ваш бизнес находил нужную аудиторию."
+        }
+      ]
+    },
+    "reviews": {
+      "label": "ОТЗЫВЫ / ПРИМЕР БЛОКА",
+      "title": "О совместной работе. От первого разговора до запуска.",
+      "title_lines": [
+        "О совместной работе.",
+        "От первого разговора до запуска."
+      ],
+      "disclaimer": "Пробный блок: тексты ниже — примеры, а не реальные отзывы клиентов.",
+      "items": [
+        {
+          "example_label": "ПРИМЕР ОТЗЫВА",
+          "category": "Разработка сайта",
+          "title": "«Помогли понять, какой сайт нам нужен»",
+          "description": "Пришли с общей идеей. Команда помогла определить структуру, расставить приоритеты и превратить задачу в понятный проект.",
+          "full_text": "На каждом этапе было ясно, что уже сделано и что предстоит дальше. Отдельно понравилось внимание к тому, как сайтом будут пользоваться наши клиенты.",
+          "author": "Имя клиента",
+          "author_role": "Компания / должность",
+          "read_more": "Читать полностью",
+          "read_less": "Свернуть"
+        },
+        {
+          "example_label": "ПРИМЕР ОТЗЫВА",
+          "category": "Дизайн и разработка",
+          "title": "«Дизайн и функциональность сложились в одно целое»",
+          "description": "Обсуждали не только внешний вид, но и то, как всё будет работать. Это помогло принимать решения без лишних переделок.",
+          "full_text": "Было удобно работать с одной командой: вопросы по интерфейсу и разработке решались вместе, а промежуточные результаты можно было спокойно обсудить.",
+          "author": "Имя клиента",
+          "author_role": "Компания / должность",
+          "read_more": "Читать полностью",
+          "read_less": "Свернуть"
+        },
+        {
+          "example_label": "ПРИМЕР ОТЗЫВА",
+          "category": "Продвижение и аналитика",
+          "title": "«Стало понятнее, что происходит после клика»",
+          "description": "Хотели разобраться в рекламе и источниках обращений. Начали с целей и аналитики, затем перешли к работе с каналами.",
+          "full_text": "Для нас было важно понимать логику решений. Команда объясняла, что проверяет и какие данные помогают определить дальнейшие шаги.",
+          "author": "Имя клиента",
+          "author_role": "Компания / должность",
+          "read_more": "Читать полностью",
+          "read_less": "Свернуть"
+        },
+        {
+          "example_label": "ПРИМЕР ОТЗЫВА",
+          "category": "Интеграции и системы",
+          "title": "«Сайт и внутренние процессы стали ближе»",
+          "description": "Задача была связать сайт с учётом и учесть привычный порядок работы команды. Начали с разбора процессов и требований.",
+          "full_text": "Сначала договорились о том, что действительно нужно на первом этапе. Такой подход помог сохранить фокус и подготовить основу для дальнейшего развития.",
+          "author": "Имя клиента",
+          "author_role": "Компания / должность",
+          "read_more": "Читать полностью",
+          "read_less": "Свернуть"
+        }
+      ]
+    },
+    "faq": {
+      "label": "08 — ВОПРОСЫ И ОТВЕТЫ",
+      "title": "Что стоит знать перед началом.",
+      "title_lines": [
+        "Что стоит знать",
+        "перед началом."
+      ],
+      "description": "Для первого разговора не нужно готовое техническое задание.",
+      "items": [
+        {
+          "question": "Можно обратиться без готового ТЗ?",
+          "answer": "Да. Расскажите о бизнесе, текущей ситуации и том, что хотите изменить. Поможем превратить это в понятную задачу и определить объём работ."
+        },
+        {
+          "question": "Можно начать с одной услуги?",
+          "answer": "Конечно. Можно прийти с одной задачей — сайтом, рекламной кампанией или интеграцией — либо поручить нам несколько связанных направлений."
+        },
+        {
+          "question": "Вы работаете с малым бизнесом?",
+          "answer": "Да, малый и средний бизнес — наш основной фокус. Определяем объём работ с учётом задачи, ваших приоритетов и этапа развития компании."
+        },
+        {
+          "question": "Можете доработать существующий сайт?",
+          "answer": "Да. Изучим текущий сайт и обсудим, что улучшить в дизайне, структуре, функциональности, интеграциях или продвижении."
+        },
+        {
+          "question": "Как рассчитываются стоимость и сроки?",
+          "answer": "Сначала согласуем требования и объём работ. Оценка зависит от сложности, нужных функций, готовности материалов и выбранных услуг."
+        },
+        {
+          "question": "Можно установить складскую систему на наш сервер?",
+          "answer": "Да. Наши складские системы устанавливаются на сервер заказчика. До внедрения обсудим инфраструктуру, рабочие процессы и необходимые интеграции."
+        }
+      ]
+    },
+    "contact": {
+      "label": "09 — НА СВЯЗИ",
+      "title": "Обсудим ваш следующий шаг.",
+      "title_lines": [
+        "Обсудим ваш",
+        "следующий шаг."
+      ],
+      "description": "Новый сайт, новая аудитория или более удобные процессы. Расскажите, что вы задумали.",
+      "email": "hello@s-aim.example",
+      "email_href": "mailto:hello@s-aim.example",
+      "phone": "+7 (000) 000-00-00",
+      "demo_note": "Демонстрационные контакты",
+      "fields": [
+        {
+          "label": "Ваше имя *",
+          "tag": "input",
+          "name": "name",
+          "type": "text",
+          "placeholder": "Ваше имя",
+          "required": true,
+          "options": []
+        },
+        {
+          "label": "Электронная почта *",
+          "tag": "input",
+          "name": "email",
+          "type": "email",
+          "placeholder": "you@company.com",
+          "required": true,
+          "options": []
+        },
+        {
+          "label": "Компания",
+          "tag": "input",
+          "name": "company",
+          "type": "text",
+          "placeholder": "Название компании или проекта",
+          "required": false,
+          "options": []
+        },
+        {
+          "label": "Чем мы можем помочь?",
+          "tag": "select",
+          "name": "service",
+          "type": null,
+          "placeholder": null,
+          "required": false,
+          "options": [
+            "Определим вместе",
+            "Дизайн и разработка сайтов",
+            "SEO и GEO",
+            "Контекстная и таргетированная реклама",
+            "Социальные сети",
+            "Приложения и заказная разработка",
+            "Интеграции и аналитика",
+            "Складская система"
+          ]
+        },
+        {
+          "label": "Расскажите о проекте",
+          "tag": "textarea",
+          "name": "message",
+          "type": null,
+          "placeholder": "Что вы хотите создать, изменить или улучшить?",
+          "required": false,
+          "options": []
+        }
+      ],
+      "form_note": "Это демоформа. Вы увидите текст, но сообщение не будет отправлено.",
+      "submit": "Посмотреть текст",
+      "preview_title": "Ваше сообщение",
+      "preview_note": "Сообщение не отправлено. Это предварительный просмотр.",
+      "download": "Скачать описание проекта ↓"
+    },
+    "footer": {
+      "links": [
+        {
+          "text": "",
+          "href": "#top",
+          "title": null
+        },
+        {
+          "text": "Студия",
+          "href": "#about",
+          "title": null
+        },
+        {
+          "text": "Услуги",
+          "href": "#services",
+          "title": null
+        },
+        {
+          "text": "Команда",
+          "href": "#team",
+          "title": null
+        },
+        {
+          "text": "Процесс",
+          "href": "#process",
+          "title": null
+        },
+        {
+          "text": "Складские системы",
+          "href": "#product",
+          "title": null
+        },
+        {
+          "text": "Вопросы и ответы",
+          "href": "#faq",
+          "title": null
+        },
+        {
+          "text": "Контакты",
+          "href": "#contact",
+          "title": null
+        },
+        {
+          "text": "Наверх ↑",
+          "href": "#top",
+          "title": null
+        }
+      ],
+      "bottom": [
+        "© 2026 S–AIM. СОЗДАЁМ ВАЖНОЕ.Остановить анимацию ⅡДИЗАЙН / РАЗРАБОТКА / РОСТ"
+      ],
+      "canvas_title": "СОЗДАЁМ ВАЖНОЕ",
+      "play": "ИГРАТЬ",
+      "game_status": "Пробел или клик — запуск. ← → — движение."
+    }
+  },
+  "en": {
+    "language": "en",
+    "title": "S–AIM — Digital design, growth & systems",
+    "meta_description": "S–AIM is an independent digital studio. For over 15 years, we have helped small and medium businesses build websites, reach customers and connect their systems.",
+    "navigation": [
+      {
+        "text": "Services",
+        "href": "#services",
+        "title": null
+      },
+      {
+        "text": "Studio",
+        "href": "#about",
+        "title": null
+      },
+      {
+        "text": "How we work",
+        "href": "#process",
+        "title": null
+      },
+      {
+        "text": "Team",
+        "href": "#team",
+        "title": null
+      },
+      {
+        "text": "FAQ",
+        "href": "#faq",
+        "title": null
+      }
+    ],
+    "header_contacts": [
+      {
+        "text": "+7 (000) 000-00-00",
+        "href": "tel:+70000000000",
+        "title": "Demo contact"
+      },
+      {
+        "text": "hello@s-aim.example",
+        "href": "mailto:hello@s-aim.example",
+        "title": "Demo contact"
+      },
+      {
+        "text": "Telegram",
+        "href": "#contact",
+        "title": "Demo contact — Telegram"
+      },
+      {
+        "text": "WhatsApp",
+        "href": "#contact",
+        "title": "Demo contact — WhatsApp"
+      }
+    ],
+    "skip_link": "Skip to content",
+    "menu": {
+      "navigation": [
+        {
+          "text": "Studio",
+          "href": "#about",
+          "title": null
+        },
+        {
+          "text": "Services",
+          "href": "#services",
+          "title": null
+        },
+        {
+          "text": "Inventory systems",
+          "href": "#product",
+          "title": null
+        },
+        {
+          "text": "Our process",
+          "href": "#process",
+          "title": null
+        },
+        {
+          "text": "Our team",
+          "href": "#team",
+          "title": null
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "title": null
+        },
+        {
+          "text": "Let’s talk ↗",
+          "href": "#contact",
+          "title": null
+        }
+      ],
+      "footer": "Let’s talk ↗S–AIM / OVER 15 YEARS IN BUSINESS"
+    },
+    "hero": {
+      "kicker": "AN INDEPENDENT DIGITAL STUDIO FOR SMALL & MEDIUM BUSINESSES",
+      "title": "We do more than build websites. We connect digital tools with your business goals.",
+      "title_lines": [
+        "We do more than build websites.",
+        "We connect digital tools",
+        "with your business goals."
+      ],
+      "description": "Come to us with a challenge, even before the brief is clear. Websites, growth, applications, analytics and automation — one connected team.",
+      "cta": "Talk to us about your project",
+      "marquee": "Connecting design with development, marketing with analytics, and your website with your business. ／ From the first idea to a system that works. ／"
+    },
+    "challenges": {
+      "label": "01 — THE STARTING POINT",
+      "title": "Different challenges. One place to start.",
+      "title_lines": [
+        "Different challenges.",
+        "One place to start."
+      ],
+      "description": "Every business reaches a point where its digital tools need to do more. Tell us where you are. We will help figure out what comes next.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Starting something new",
+          "description": "You have a business idea, but need a website, an online store or an app to bring it to life."
+        },
+        {
+          "number": "02",
+          "title": "A website that needs to work harder",
+          "description": "The business has moved forward. The website needs to catch up — in design, functionality or both."
+        },
+        {
+          "number": "03",
+          "title": "Traffic without a clear picture",
+          "description": "Advertising is running, but it is hard to see which channels bring valuable enquiries."
+        },
+        {
+          "number": "04",
+          "title": "The right people cannot find you",
+          "description": "Your customers are searching. You need to be visible in search, AI answers and social media."
+        },
+        {
+          "number": "05",
+          "title": "Systems that do not talk",
+          "description": "The website, stock records and internal tools need to work as one connected process."
+        },
+        {
+          "number": "06",
+          "title": "More than one task to solve",
+          "description": "You need design, development and marketing to move in the same direction."
+        }
+      ]
+    },
+    "about": {
+      "label": "02 — THE STUDIO",
+      "title": "More than 15 years. Still focused on what’s next.",
+      "title_lines": [
+        "More than 15 years.",
+        "Still focused on what’s next."
+      ],
+      "paragraphs": [
+        "We are S–AIM, an independent digital studio for small and medium businesses.",
+        "Behind us are websites, online stores, advertising campaigns, applications and business systems. We bring that experience to each new challenge, with a team that can connect design, technology and growth."
+      ],
+      "stats": [
+        {
+          "value": "15+",
+          "title": "Years in business",
+          "description": "Experience across digital projects, platforms and changing business needs."
+        },
+        {
+          "value": "6",
+          "title": "Areas of expertise",
+          "description": "From websites and promotion to applications and integrations. The right expertise for your business needs."
+        },
+        {
+          "value": "1",
+          "title": "A connected team",
+          "description": "Design, development, promotion and systems brought together around the same goal."
+        }
+      ]
+    },
+    "services": {
+      "label": "03 — SERVICES",
+      "title": "From the first website to a connected business.",
+      "title_lines": [
+        "From the first website",
+        "to a connected business."
+      ],
+      "description": "You do not have to do everything at once. We bring in the expertise your business needs, when it needs it.",
+      "categories": [
+        {
+          "number": "01",
+          "title": "Websites",
+          "description": "We plan the structure, design the experience and develop the functionality. Whether you need a focused landing page or a complete online store, the result starts with your goals and the way your customers buy.",
+          "offerings": [
+            {
+              "text": "Landing pages",
+              "service_choice": "Website design & development"
+            },
+            {
+              "text": "Corporate websites",
+              "service_choice": "Website design & development"
+            },
+            {
+              "text": "Business websites",
+              "service_choice": "Website design & development"
+            },
+            {
+              "text": "Online stores",
+              "service_choice": "Website design & development"
+            },
+            {
+              "text": "Web design",
+              "service_choice": "Website design & development"
+            },
+            {
+              "text": "Frontend & backend",
+              "service_choice": "Website design & development"
+            }
+          ]
+        },
+        {
+          "number": "02",
+          "title": "SEO & GEO",
+          "description": "We help people discover your business through search engines and AI-generated answers. Technical optimisation, content and a clear website structure work together to make your expertise easier to find and understand.",
+          "offerings": [
+            {
+              "text": "Search engine optimisation",
+              "service_choice": "SEO & GEO"
+            },
+            {
+              "text": "AI search optimisation",
+              "service_choice": "SEO & GEO"
+            },
+            {
+              "text": "Technical SEO",
+              "service_choice": "SEO & GEO"
+            },
+            {
+              "text": "Content & structure",
+              "service_choice": "SEO & GEO"
+            }
+          ]
+        },
+        {
+          "number": "03",
+          "title": "Advertising",
+          "description": "We plan and manage advertising around your audience, market and goals. From campaign structure and creative to tracking enquiries, we connect advertising decisions with what happens after the click.",
+          "offerings": [
+            {
+              "text": "Google Ads",
+              "service_choice": "Paid search & social"
+            },
+            {
+              "text": "Yandex Direct",
+              "service_choice": "Paid search & social"
+            },
+            {
+              "text": "VK",
+              "service_choice": "Paid search & social"
+            },
+            {
+              "text": "Telegram",
+              "service_choice": "Paid search & social"
+            },
+            {
+              "text": "Instagram",
+              "service_choice": "Paid search & social"
+            },
+            {
+              "text": "Mail.ru",
+              "service_choice": "Paid search & social"
+            }
+          ]
+        },
+        {
+          "number": "04",
+          "title": "Social media",
+          "description": "From strategy and visual direction to content creation and day-to-day management, we help brands build a consistent presence in social media. We work with businesses across different markets and platforms.",
+          "offerings": [
+            {
+              "text": "Social strategy",
+              "service_choice": "Social media"
+            },
+            {
+              "text": "Content creation",
+              "service_choice": "Social media"
+            },
+            {
+              "text": "Community management",
+              "service_choice": "Social media"
+            },
+            {
+              "text": "Instagram",
+              "service_choice": "Social media"
+            },
+            {
+              "text": "Telegram",
+              "service_choice": "Social media"
+            },
+            {
+              "text": "VK",
+              "service_choice": "Social media"
+            }
+          ]
+        },
+        {
+          "number": "05",
+          "title": "Applications",
+          "description": "We develop mobile and specialised applications around individual requirements. Customer experiences, internal tools and business processes — the scope and functionality come from the task, not a standard package.",
+          "offerings": [
+            {
+              "text": "Mobile applications",
+              "service_choice": "Apps & custom software"
+            },
+            {
+              "text": "Specialised software",
+              "service_choice": "Apps & custom software"
+            },
+            {
+              "text": "Internal tools",
+              "service_choice": "Apps & custom software"
+            },
+            {
+              "text": "Custom development",
+              "service_choice": "Apps & custom software"
+            }
+          ]
+        },
+        {
+          "number": "06",
+          "title": "Integrations",
+          "description": "We connect websites with inventory and accounting systems, including 1C. End-to-end analytics, call tracking and messenger tracking help you understand where enquiries come from and how your channels work together.",
+          "offerings": [
+            {
+              "text": "1C integrations",
+              "service_choice": "Integrations & analytics"
+            },
+            {
+              "text": "Inventory systems",
+              "service_choice": "Integrations & analytics"
+            },
+            {
+              "text": "End-to-end analytics",
+              "service_choice": "Integrations & analytics"
+            },
+            {
+              "text": "Call tracking",
+              "service_choice": "Integrations & analytics"
+            },
+            {
+              "text": "Messenger tracking",
+              "service_choice": "Integrations & analytics"
+            }
+          ]
+        }
+      ]
+    },
+    "process": {
+      "label": "04 — PROCESS",
+      "title": "Understand the challenge. Build. Launch. Move forward.",
+      "title_lines": [
+        "Understand the challenge.",
+        "Build. Launch. Move forward."
+      ],
+      "description": "A clear process, from the first conversation to the next step.",
+      "steps": [
+        {
+          "number": "STEP 01",
+          "title": "Understand",
+          "description": "We learn about your business, customers and the task you want to solve."
+        },
+        {
+          "number": "STEP 02",
+          "title": "Define",
+          "description": "We agree on the scope, priorities, deliverables, timeline and budget."
+        },
+        {
+          "number": "STEP 03",
+          "title": "Create",
+          "description": "We develop the design, content, software or campaign, sharing progress along the way."
+        },
+        {
+          "number": "STEP 04",
+          "title": "Launch",
+          "description": "We check the details, connect the tools and put the solution into use."
+        },
+        {
+          "number": "STEP 05",
+          "title": "Develop",
+          "description": "We review the next steps and discuss how the project can grow with your business."
+        }
+      ],
+      "principles_title": "How we work together",
+      "principles": [
+        "Agree on the task before choosing the tools",
+        "Make the scope and responsibilities clear",
+        "Share progress throughout the project",
+        "Check the details before launch",
+        "Keep the next stage of your business in mind"
+      ]
+    },
+    "product": {
+      "label": "05 — OUR OWN SOLUTION",
+      "title": "Your inventory. Your server. Your workflow.",
+      "title_lines": [
+        "Your inventory.",
+        "Your server. Your workflow."
+      ],
+      "description": "Our own inventory systems, installed on your infrastructure. A practical foundation for managing stock and connecting your operations.",
+      "features": [
+        {
+          "label": "Deployment",
+          "description": "Installed on your company’s server"
+        },
+        {
+          "label": "Implementation",
+          "description": "Set up around your business processes"
+        },
+        {
+          "label": "Integration",
+          "description": "Connect your website and accounting tools"
+        },
+        {
+          "label": "Configuration",
+          "description": "Discuss the functionality your team needs"
+        }
+      ],
+      "cta": "Talk about your inventory system"
+    },
+    "capabilities": {
+      "label": "06 — ONE CONNECTED PRACTICE",
+      "title": "Different disciplines. One direction.",
+      "title_lines": [
+        "Different disciplines.",
+        "One direction."
+      ],
+      "description": "Bring us one task or the whole picture. We can develop a new project, improve an existing one or connect the parts that are already there.",
+      "marquees": [
+        "Website design / Frontend / Backend / SEO / GEO / Google Ads / Social media /",
+        "Inventory systems / Applications / Analytics / 1C / Call tracking / Integrations /"
+      ]
+    },
+    "team": {
+      "label": "07 — TEAM",
+      "title": "Design, technology and growth. Working as one team.",
+      "title_lines": [
+        "Design, technology and growth.",
+        "Working as one team."
+      ],
+      "description": "Different skills, shared responsibility for the project. We connect the people who shape the experience, build the technology and help your business reach its audience.",
+      "items": [
+        {
+          "title": "Design",
+          "subtitle": "Structure, interfaces & visual direction",
+          "description": "We turn a business idea into a clear experience — from the way a page reads to the way a customer moves through it."
+        },
+        {
+          "title": "Development",
+          "subtitle": "Web, apps & integrations",
+          "description": "We connect what people see with what needs to happen behind it. Frontend, backend, applications and business systems."
+        },
+        {
+          "title": "Growth",
+          "subtitle": "Search, advertising & social",
+          "description": "We bring together SEO, GEO, advertising and social media to help your business reach the right people."
+        }
+      ]
+    },
+    "reviews": {
+      "label": "TESTIMONIALS / SAMPLE SECTION",
+      "title": "Working together. From the first conversation to launch.",
+      "title_lines": [
+        "Working together.",
+        "From the first conversation to launch."
+      ],
+      "disclaimer": "An experimental section. The text below is illustrative, not actual client feedback.",
+      "items": [
+        {
+          "example_label": "SAMPLE TESTIMONIAL",
+          "category": "Website development",
+          "title": "“They helped us understand the website we needed”",
+          "description": "We came with a broad idea. The team helped define the structure, set priorities and turn the task into a clear project.",
+          "full_text": "At each stage, we understood what was ready and what would happen next. We especially appreciated the attention to how our customers would use the website.",
+          "author": "Client name",
+          "author_role": "Company / role",
+          "read_more": "Read full text",
+          "read_less": "Show less"
+        },
+        {
+          "example_label": "SAMPLE TESTIMONIAL",
+          "category": "Design & development",
+          "title": "“Design and functionality came together”",
+          "description": "The conversation covered both the appearance and how everything would work. That made decisions easier and reduced back-and-forth.",
+          "full_text": "Having one team was convenient: interface and development questions were considered together, with time to discuss the work along the way.",
+          "author": "Client name",
+          "author_role": "Company / role",
+          "read_more": "Read full text",
+          "read_less": "Show less"
+        },
+        {
+          "example_label": "SAMPLE TESTIMONIAL",
+          "category": "Growth & analytics",
+          "title": "“We could see what happened after the click”",
+          "description": "We wanted to understand advertising and the sources of enquiries. We started with goals and analytics, then moved on to the channels.",
+          "full_text": "Understanding the reasoning mattered to us. The team explained what they were checking and which data could help decide the next steps.",
+          "author": "Client name",
+          "author_role": "Company / role",
+          "read_more": "Read full text",
+          "read_less": "Show less"
+        },
+        {
+          "example_label": "SAMPLE TESTIMONIAL",
+          "category": "Integrations & systems",
+          "title": "“The website became part of the workflow”",
+          "description": "We needed to connect the website with our records and respect the way the team worked. We started by mapping the processes and requirements.",
+          "full_text": "First, we agreed on what was necessary for the initial stage. That approach helped maintain focus and build a foundation for further development.",
+          "author": "Client name",
+          "author_role": "Company / role",
+          "read_more": "Read full text",
+          "read_less": "Show less"
+        }
+      ]
+    },
+    "faq": {
+      "label": "08 — FAQ",
+      "title": "A few things you might want to know.",
+      "title_lines": [
+        "A few things you",
+        "might want to know."
+      ],
+      "description": "You do not need a finished brief to start a conversation.",
+      "items": [
+        {
+          "question": "Can we talk before the brief is ready?",
+          "answer": "Yes. Tell us about your business, what is happening now and what you would like to change. We can help turn that into a clear scope of work."
+        },
+        {
+          "question": "Can we start with just one service?",
+          "answer": "Absolutely. You can bring us a single task — a website, an advertising campaign or an integration — or ask us to connect several areas of work."
+        },
+        {
+          "question": "Do you work with small businesses?",
+          "answer": "Yes. Our focus is small and medium businesses. We shape the scope around the task, your priorities and the stage your business is at."
+        },
+        {
+          "question": "Can you improve an existing website?",
+          "answer": "Yes. We can review your current website and discuss changes to its design, structure, functionality, integrations or promotion."
+        },
+        {
+          "question": "How do you estimate cost and timing?",
+          "answer": "We first agree on the requirements and scope. The estimate depends on the complexity, required functionality, materials available and the services involved."
+        },
+        {
+          "question": "Can the inventory system run on our server?",
+          "answer": "Yes. Our own inventory systems can be installed on a customer’s server. We discuss the infrastructure, workflows and required integrations before implementation."
+        }
+      ]
+    },
+    "contact": {
+      "label": "09 — GET IN TOUCH",
+      "title": "Let’s talk about what comes next.",
+      "title_lines": [
+        "Let’s talk about",
+        "what comes next."
+      ],
+      "description": "A new website, a new audience or a better way to work. Tell us what is on your mind.",
+      "email": "hello@s-aim.example",
+      "email_href": "mailto:hello@s-aim.example",
+      "phone": "+7 (000) 000-00-00",
+      "demo_note": "Demo contact details",
+      "fields": [
+        {
+          "label": "Your name *",
+          "tag": "input",
+          "name": "name",
+          "type": "text",
+          "placeholder": "Your name",
+          "required": true,
+          "options": []
+        },
+        {
+          "label": "Email address *",
+          "tag": "input",
+          "name": "email",
+          "type": "email",
+          "placeholder": "you@company.com",
+          "required": true,
+          "options": []
+        },
+        {
+          "label": "Company",
+          "tag": "input",
+          "name": "company",
+          "type": "text",
+          "placeholder": "Company or project name",
+          "required": false,
+          "options": []
+        },
+        {
+          "label": "What can we help with?",
+          "tag": "select",
+          "name": "service",
+          "type": null,
+          "placeholder": null,
+          "required": false,
+          "options": [
+            "Let’s figure it out together",
+            "Website design & development",
+            "SEO & GEO",
+            "Paid search & social",
+            "Social media",
+            "Apps & custom software",
+            "Integrations & analytics",
+            "Inventory system"
+          ]
+        },
+        {
+          "label": "Tell us about your project",
+          "tag": "textarea",
+          "name": "message",
+          "type": null,
+          "placeholder": "What would you like to create, change or improve?",
+          "required": false,
+          "options": []
+        }
+      ],
+      "form_note": "This is a demo. Preview your message; nothing will be sent.",
+      "submit": "Preview message",
+      "preview_title": "Your message preview",
+      "preview_note": "Not sent. This form is a local preview.",
+      "download": "Download your brief ↓"
+    },
+    "footer": {
+      "links": [
+        {
+          "text": "",
+          "href": "#top",
+          "title": null
+        },
+        {
+          "text": "Studio",
+          "href": "#about",
+          "title": null
+        },
+        {
+          "text": "Services",
+          "href": "#services",
+          "title": null
+        },
+        {
+          "text": "Team",
+          "href": "#team",
+          "title": null
+        },
+        {
+          "text": "Process",
+          "href": "#process",
+          "title": null
+        },
+        {
+          "text": "Inventory systems",
+          "href": "#product",
+          "title": null
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "title": null
+        },
+        {
+          "text": "Contact us",
+          "href": "#contact",
+          "title": null
+        },
+        {
+          "text": "Back to top ↑",
+          "href": "#top",
+          "title": null
+        }
+      ],
+      "bottom": [
+        "© 2026 S–AIM. MAKE IT MATTER.Pause motion ⅡDESIGN / BUILD / GROW"
+      ],
+      "canvas_title": "MAKE IT MATTER",
+      "play": "PLAY",
+      "game_status": "Press Space or click to launch. ← → to move."
+    }
+  }
+}
